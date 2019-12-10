@@ -1,6 +1,37 @@
+body {
+    background-color: #f5f5f5;
+    color: #4e4e4e;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1e1e1e;
+}
+
+a {
+    color: #1e1e1e;
+    transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+    color: #717171;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.container {
+    margin: 10px;
+    margin-top: 15px;
+    padding: 10px;
+}
+
 .Finding-Copy {
-    width: 836px;
-    height: 131px;
+    max-width: 836px;
+    max-height: 131px;
     font-family: CourierNewPSMT;
     font-size: 7.7vw;
     font-weight: normal;
@@ -9,13 +40,16 @@
     line-height: normal;
     letter-spacing: -4.68px;
     color: #000000;
+    display: inline;
 }
 
 .F {
     width: 65px;
-    height: 131px;
+    max-height: 131px;
+    display: block;
+    float: right;
     font-family: CourierNewPSMT;
-    font-size: 115px;
+    font-size: 7.7vw;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
