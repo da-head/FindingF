@@ -1,0 +1,52 @@
+.Finding-Copy {
+    width: 836px;
+    height: 131px;
+    font-family: CourierNewPSMT;
+    font-size: 7.7vw;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -4.68px;
+    color: #000000;
+}
+
+.F {
+    width: 65px;
+    height: 131px;
+    font-family: CourierNewPSMT;
+    font-size: 115px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -4.68px;
+    color: #000000;
+}
+
+.ticket {
+    width: 1504px;
+    height: 573px;
+    transform: rotate(-9deg);
+    box-shadow: 16px 65px 34px 0 rgba(131, 131, 131, 0.5);
+    display: block;
+    margin: 0px auto;
+    max-width: 85%;
+    height: auto;
+}
+
+.discription {
+    width: 301px;
+    height: 80px;
+    font-family: NotoSansCJKkr;
+    font-size: 1.6vw;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: 0.8px;
+    color: #000000;
+}
+
+
+/* fff.css Displaying fff.css. */
