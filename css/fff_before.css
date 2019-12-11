@@ -1,0 +1,85 @@
+body {
+    background-color: #f5f5f5;
+    color: #4e4e4e;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1e1e1e;
+}
+
+a {
+    color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+    color: transparent;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.container {
+    margin: 10px;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.Finding-Copy {
+    max-width: 836px;
+    max-height: 131px;
+    font-family: CourierNewPSMT;
+    font-size: 7.7vw;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -4.68px;
+    color: #000000;
+    display: inline;
+}
+
+.F {
+    width: 65px;
+    display: block;
+    float: right;
+    font-size: 7.7vw;
+    color: #000000;
+    outline: 0;
+}
+
+.F:focus,
+.F:active {
+    outline: 0;
+}
+
+.ticket {
+    width: 1504px;
+    height: 573px;
+    transform: rotate(-9deg);
+    box-shadow: 16px 65px 34px 0 rgba(131, 131, 131, 0.5);
+    display: block;
+    margin: 0px auto;
+    max-width: 85%;
+    height: auto;
+}
+
+.discription {
+    width: 301px;
+    height: 80px;
+    font-family: NotoSansCJKkr;
+    font-size: 1.6vw;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: 0.8px;
+    color: #000000;
+}
+
+
+/* fff.css Displaying fff.css. */
