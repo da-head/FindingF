@@ -10,9 +10,11 @@
 //--//-->   STYLES GENERALES
 ======================================*/
 
+
+/* .service-box, */
+
 .box-shadow,
 .paralax-mf,
-.service-box,
 .work-box,
 .card-blog {
     box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
