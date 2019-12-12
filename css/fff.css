@@ -152,7 +152,7 @@ a:hover {
     margin: 8vh auto;
     width: 465px;
     font-family: NotoSansCJKkr;
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-weight: bold;
     line-height: 1.50;
     text-align: center;
@@ -179,11 +179,12 @@ a:hover {
 }
 
 .intro-section {
-    font-family: CourierNewPS-MT;
-    font-size: 1.5vw;
+    position: relative;
+    height: 100%;
+    margin: auto;
+    font-family: CourierNewPSMT;
+    font-size: 1.8vw;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.48;
     letter-spacing: -0.47px;
     text-align: center;
@@ -192,7 +193,7 @@ a:hover {
 
 .person-name {
     font-family: NotoSansCJKkr;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -212,20 +213,18 @@ a:hover {
 
 /*------/ 인물 동그라미 /------*/
 
-.section-wrapper {
+
+/* .section-wrapper {
     padding: 2.5rem 1.3rem;
     border-radius: 1rem;
     margin-bottom: 3rem;
-}
+} */
 
 .person-circle {
-    height: 100px;
-    width: 100px;
-    font-size: 2rem;
+    /*정사각 이미지만 넣으셈*/
+    width: 100%;
     border-radius: 50%;
-    line-height: 1.55;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0 0;
     box-shadow: 0 0 0 0;
     display: block;
 }
