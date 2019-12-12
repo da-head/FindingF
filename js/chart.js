@@ -5,6 +5,7 @@ google.charts.setOnLoadCallback(onReady);
 
 
 /*Color pallete*/
+
 const mainBlue = '#0060ff'
 const subBlue = '#7daeff'
 const dimBlue = '#c5dbff'
@@ -15,23 +16,21 @@ const dimGray = '#dadada' /*연함*/
 
 
 async function onReady() {
-    // json -> html로 데이터 어떻게 불러오는지 샘플
-    const allMovies = await (await fetch('./src/data/films.json')).json();
+    // // json -> html로 데이터 어떻게 불러오는지 샘플
+    // const allMovies = await (await fetch('./src/data/films.json')).json();
 
-    const movies = allMovies.filter(i => i.category === 'humour');
-    document.getElementById('movie').innerHTML = `
-        ${movies.map(movie => `
-            <p>${movie.id} - ${movie.name}</p>
-        `).join('')}
-    `;
+    // const movies = allMovies.filter(i => i.category === 'humour');
+    // document.getElementById('movie').innerHTML = `${movies.map(movie => `<p>${movie.id} - ${movie.name}</p>`).join('')}`;
 
     // chart01 - 직군별 성비
+
     drawChart1({
         id: 'chart-director',
         title: '감독 성비',
         men: 572,
         wom: 90,
     });
+
     drawChart1({
         id: 'chart-writer',
         title: '작가 성비',
@@ -72,7 +71,6 @@ async function onReady() {
         f2: 5.4,
         f3: 1
     });
-
 };
 
 // 직급 별 성별 분배 차트 그리기

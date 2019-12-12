@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 ol,
 ul {
     list-style: none;
@@ -170,6 +174,18 @@ a:hover {
     color: #000000;
 }
 
+.text-small {
+    display: block;
+    /* margin: 8vh auto 8vh 0;
+    width: 465px; */
+    font-family: NotoSansCJKkr;
+    font-size: 1vw;
+    font-weight: bold;
+    line-height: 1.50;
+    text-align: left;
+    color: #000000;
+}
+
 .wrap {
     position: relative;
     width: 1020px;
@@ -188,6 +204,16 @@ a:hover {
     letter-spacing: -0.47px;
     text-align: center;
     color: #000000;
+}
+
+.line-a {
+    display: inline-block;
+    width: 40vw;
+    max-width: 45%;
+    height: 0.2vh;
+    background-color: black;
+    margin: 50% 0;
+    position: absolute;
 }
 
 .person-name {
@@ -247,6 +273,16 @@ a:hover {
     margin: 0 0;
     box-shadow: 0 0 0 0;
     display: block;
+}
+
+
+/* 사용한 데이터 */
+
+.data-box {
+    background-color: #fff;
+    padding: 2.5rem 1.3rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
 }
 
 
