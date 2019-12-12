@@ -43,10 +43,10 @@ a:hover {
 }
 
 .text-block {
-    display: block;
-    width: 100vw;
-    margin: 5vh auto;
-    padding: 0px;
+    display: inline-block;
+    width: 100%;
+    margin: 5vh 0;
+    padding: 0;
 }
 
 .Finding-Copy {
@@ -105,12 +105,13 @@ a:hover {
 
 .discription .wrap {
     margin-top: 15vh;
-    padding: 5px;
+    padding: 1vw;
 }
 
 .discription {
     min-width: 250px;
     min-height: 80px;
+    position: absolute;
     font-family: NotoSansCJKkr;
     font-size: 1.5vw;
     font-weight: 500;
@@ -125,9 +126,8 @@ a:hover {
 .discription-en {
     min-width: 250px;
     min-height: 80px;
-    display: block;
+    position: relative;
     float: right;
-    margin-right: 1vw;
     font-family: CourierNewPSMT;
     font-size: 1.5vw;
     font-weight: bold;
