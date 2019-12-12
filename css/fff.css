@@ -161,13 +161,13 @@ a:hover {
 
 .text2 {
     display: block;
-    margin: 8vh auto;
+    margin: 8vh auto 8vh 0;
     width: 465px;
     font-family: NotoSansCJKkr;
     font-size: 1.5vw;
     font-weight: bold;
     line-height: 1.50;
-    text-align: center;
+    text-align: left;
     color: #000000;
 }
 
@@ -202,6 +202,18 @@ a:hover {
     text-align: center;
 }
 
+.person-name-2 {
+    font-family: NotoSansCJKkr;
+    font-size: 1.2vw;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.79;
+    letter-spacing: normal;
+    text-align: left;
+    margin-top: 3vh;
+}
+
 .wom-color {
     color: #0060ff;
 }
@@ -223,6 +235,15 @@ a:hover {
 .person-circle {
     /*정사각 이미지만 넣으셈*/
     width: 100%;
+    border-radius: 50%;
+    margin: 0 0;
+    box-shadow: 0 0 0 0;
+    display: block;
+}
+
+.person-circle-2 {
+    /*정사각 이미지만 넣으셈*/
+    width: 50%;
     border-radius: 50%;
     margin: 0 0;
     box-shadow: 0 0 0 0;
