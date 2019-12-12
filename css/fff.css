@@ -152,7 +152,19 @@ a:hover {
     margin: 8vh auto;
     width: 465px;
     font-family: NotoSansCJKkr;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    line-height: 1.50;
+    text-align: center;
+    color: #000000;
+}
+
+.text2 {
+    display: block;
+    margin: 8vh auto;
+    width: 465px;
+    font-family: NotoSansCJKkr;
+    font-size: 1.5vw;
     font-weight: bold;
     line-height: 1.50;
     text-align: center;
