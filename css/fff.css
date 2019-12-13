@@ -150,6 +150,14 @@ a:hover {
     background-color: #fff8e5;
 }
 
+@media (max-width: 700px) {
+    .filmo1 {
+        height: 0vh;
+        width: 0vw;
+        visibility: hidden;
+    }
+}
+
 
 /* 텍스트 스타일 */
 
