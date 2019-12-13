@@ -7,12 +7,14 @@ ul {
     list-style: none;
 }
 
+
+/* 
 body,
 ol,
 ul {
     margin: 0;
     padding: 0;
-}
+} */
 
 h1,
 h2,
@@ -85,7 +87,7 @@ a:hover {
 
 .line-f {
     display: inline-block;
-    width: 40vw;
+    width: 44vw;
     max-width: 45%;
     height: 0.2vh;
     background-color: black;
@@ -160,6 +162,33 @@ a:hover {
     line-height: 1.50;
     text-align: center;
     color: #000000;
+}
+
+.text1_2 {
+    display: block;
+    margin: 4vh auto;
+    font-family: NotoSansCJKkr;
+    font-size: 1.5vw;
+    font-weight: 600;
+    line-height: 4vh;
+    text-align: center;
+    color: #000000;
+}
+
+h3 .text1_2 {
+    display: inline-block;
+}
+
+.text1_2 .wom-color {
+    color: #0060ff;
+}
+
+.text1_2 .man-color {
+    color: #979797;
+}
+
+.text1_2 .bolder {
+    font-weight: 800;
 }
 
 .text2 {
