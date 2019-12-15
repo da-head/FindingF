@@ -1,11 +1,9 @@
 google.charts.load('current', {
-    packages: ['corechart', 'bar']
+    packages: ['corechart', 'bar', 'line']
 });
 google.charts.setOnLoadCallback(onReady);
 
-
 /*Color pallete*/
-
 const mainBlue = '#0060ff'
 const subBlue = '#7daeff'
 const dimBlue = '#c5dbff'
@@ -22,15 +20,22 @@ async function onReady() {
     // const movies = allMovies.filter(i => i.category === 'humour');
     // document.getElementById('movie').innerHTML = `${movies.map(movie => `<p>${movie.id} - ${movie.name}</p>`).join('')}`;
 
-    // chart01 - 직군별 성비
+    //감독별 제작비
 
+    drawChart_cost({
+        id: 'production_cost',
+        title: '성비',
+        data: await (await fetch('./src/data/director_cost.json')).json();
+    });
+
+
+    // drawChart1 - 직군별 성비
     drawChart1({
         id: 'chart-director',
         title: '감독 성비',
         men: 572,
         wom: 90,
     });
-
     drawChart1({
         id: 'chart-writer',
         title: '작가 성비',
@@ -71,7 +76,42 @@ async function onReady() {
         f2: 5.4,
         f3: 1
     });
+
+    drawChart3({
+        id: 'top10-donut',
+        title: '전체 상영횟수의 87%를 차지하는 상위 10대 배급사'
+    })
 };
+
+
+
+// 00. 제작비 비교 bar
+function drawChart_cost({ id, title, data }) {
+
+    const
+    var options = {
+        hAxis: {
+            title: '순제작비'
+        },
+        vAxis: {
+            title: '년도'
+        },
+        colors: ['#a52714', '#097138'],
+        crosshair: {
+            color: '#000',
+            trigger: 'selection'
+        },
+        legend: {
+            position: 'bottom'
+        },
+        showRowNumber: true,
+    };
+
+    const element = document.getElementById(id);
+    const chart = new google.visualization.LineChart(element);
+
+    chart.draw(data, options);
+}
 
 // 직급 별 성별 분배 차트 그리기
 function drawChart1({ id, title, men, wom }) {
@@ -86,6 +126,7 @@ function drawChart1({ id, title, men, wom }) {
 
     const options = {
         title,
+        fontName: 'CourierNewPSMT',
         // colors: ['#979797', '#0060ff', '#0060ff'],
         bar: { groupWidth: "70%" },
         legend: { position: "none" },
@@ -118,26 +159,29 @@ function drawChart2({ id, title, f0, f1, f2, f3 }) {
 
     const data = google.visualization.arrayToDataTable([
         ['등급', '비율', { type: 'string', role: 'tooltip' }],
-        ['F3', f3, `f3: ${f3}%`],
-        ['F2', f2, `f2: ${f2}%`],
-        ['F1', f1, `f1: ${f1}%`],
-        ['F0', f0, `f0: ${f0}%`],
+        ['F-3', f3, `f-3: ${f3}%`],
+        ['F-2', f2, `f-2: ${f2}%`],
+        ['F-1', f1, `f-1: ${f1}%`],
+        ['F-0', f0, `f-0: ${f0}%`],
     ]);
+
     const options = {
         // title,
         pieHole: 0.5,
         pieStartAngle: 0,
         legend: 'none',
-        pieSliceText: 'none',
+        // pieSliceText: 'none',
+        fontName: 'CourierNewPSMT',
+        fontSize: 12,
         slices: {
             0: { color: mainBlue },
             1: { color: subBlue },
             2: { color: subGray },
             3: { color: dimGray },
-        }
-        // pieSliceTextStyle: {
-        //     color: 'black',
-        //   },
+        },
+        pieSliceTextStyle: {
+            color: 'black',
+        },
     };
 
     const element = document.getElementById(id);
@@ -145,3 +189,33 @@ function drawChart2({ id, title, f0, f1, f2, f3 }) {
 
     chart.draw(data, options);
 };
+
+// 배급사 87%
+function drawChart3({ id, title }) {
+
+    const data = google.visualization.arrayToDataTable([
+        ['배급사', '숫자', { type: 'string', role: 'tooltip' }],
+        ['상위 10대', 87, `상위 10대 배급사: 87%`],
+        ['기타', 13, `이 외 배급사 13%`],
+    ]);
+
+    const options = {
+        title,
+        pieHole: 0.5,
+        pieStartAngle: 0,
+        legend: 'none',
+        // pieSliceText: 'none',
+        fontName: 'CourierNewPSMT',
+        // fontSize: 12,
+        slices: {
+            0: { color: mainBlue },
+            1: { color: subGray },
+        }
+    };
+
+    const element = document.getElementById(id);
+    const chart = new google.visualization.PieChart(element);
+
+    chart.draw(data, options);
+
+}

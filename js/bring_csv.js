@@ -33,3 +33,27 @@ $(function() {
     }
 
 });
+
+// $(function() {
+//     var fileName = '../src/data/director_cost.csv';
+
+//     // 파일 이름
+//     $.ajax({
+//         url: fileName,
+//         dataType: 'text',
+//         success: function(data) {
+//             var allRow = data;
+//             //.split(/\r?\n|\r/)
+//             var textLine = "";
+//             for (var singleRow = 0; singleRow < allRow.length; singleRow++) {
+//                 var collapse = allRow[singleRow].split(",");
+
+//                 for (var count = 0; count < collapse.length; count++) {
+//                     textLine += collapse[count];
+//                 }
+//             }
+//             $('#textArea2').append(textLine);
+//             $('#textArea2').append("<br>");
+//         }
+//     });
+// });

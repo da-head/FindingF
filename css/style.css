@@ -569,6 +569,7 @@
 
 .intro {
     height: 100vh;
+    margin-top: 3vh;
     position: relative;
     /* color: #fff; */
 }

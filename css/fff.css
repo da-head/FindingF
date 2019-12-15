@@ -145,7 +145,9 @@ a:hover {
        ********** 본문 **********
 ====================================== */
 
-.intro1 {
+.page {
+    height: 100vh;
+    width: 100vw;
     clear: both;
     background-color: #fff8e5;
 }
