@@ -1,0 +1,18 @@
+.chart-container {
+    height: 300px;
+}
+
+.chartWithOverlay {
+    position: relative;
+    width: fit-content;
+}
+
+.overlay {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    /* chartArea top  */
+    left: 50%;
+    /* chartArea left */
+}
