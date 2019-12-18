@@ -127,12 +127,14 @@ a:hover {
     letter-spacing: 0.8px;
     color: #000000;
     float: left;
+    text-align: left;
 }
 
 .discription-en {
     min-width: 250px;
     min-height: 80px;
     position: relative;
+    text-align: right;
     float: right;
     font-family: CourierNewPSMT;
     font-size: 1.5vw;
@@ -212,6 +214,13 @@ a:hover {
     color: #000000;
 }
 
+.hypo_b {
+    color: black;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+}
+
 .hypo {
     color: #0060ff;
     font-weight: 600;
@@ -252,7 +261,7 @@ h3 .text1_2 {
     /* margin: 8vh auto 8vh 0;
     width: 465px; */
     font-family: NotoSansCJKkr;
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     font-weight: medium;
     line-height: 1.50;
     text-align: center;
