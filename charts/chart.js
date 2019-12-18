@@ -13,28 +13,19 @@ const mainGray = '#979797' /*진함*/
 const subGray = '#c1c1c1'
 const dimGray = '#dadada' /*연함*/
 
-const bgcolor = '#fff8e5' /*아이보리*/
-
-// // json -> html로 데이터 어떻게 불러오는지 샘플
-// const allMovies = await (await fetch('./src/data/films.json')).json();
-
-// const movies = allMovies.filter(i => i.category === 'humour');
-// document.getElementById('movie').innerHTML = `${movies.map(movie => `<p>${movie.id} - ${movie.name}</p>`).join('')}`;
 
 async function onReady() {
+    // // json -> html로 데이터 어떻게 불러오는지 샘플
+    // const allMovies = await (await fetch('./src/data/films.json')).json();
 
-    /*감독별 제작비*/
+    // const movies = allMovies.filter(i => i.category === 'humour');
+    // document.getElementById('movie').innerHTML = `${movies.map(movie => `<p>${movie.id} - ${movie.name}</p>`).join('')}`;
+
+    //감독별 제작비
     drawChart_cost({
         id: 'production_cost',
         title: 'production_cost',
     });
-
-    // /*배우 필모*/
-    // drawChart_actor_filmo({
-    //     id: 'actors_filmo'
-    // })
-
-    drawChart();
 
     // drawChart1 - 직군별 성비
     drawChart1({
@@ -102,7 +93,6 @@ async function onReady() {
 01. 감독 제작비 비교 bar
 ---------------------*/
 function drawChart_cost({ id, title }) {
-
     const data = google.visualization.arrayToDataTable([
         ['year', '이경미', '김한민', '강형철'],
         ['2008', 10, { v: 3, f: '0' }, 25],
@@ -112,42 +102,41 @@ function drawChart_cost({ id, title }) {
         ['2015', 42, { v: 3, f: '0' }, { v: 3, f: '0' }],
         ['2018', { v: 3, f: '0' }, { v: 3, f: '0' }, 157],
     ]);
-
-    var options = {
+    const options = {
         chart: {
             title: '제작비 비교',
-            subtitle: '비슷한 시기에 신인 감독상을 받은 감독들의 연도별 작품 제작비 비교 (단위: 억원)'
+            subtitle: '비슷한 시기에 신인 감독상을 받은 감독들의 연도별 작품 제작비 비교'
         },
         hAxis: {
             gridlines: 'none',
             textPosition: 'none',
         },
         vAxis: {
+
             gridlines: 'none',
             title: '제작비(단위: 억원)',
             format: 'decimal',
             textPosition: 'none',
         },
         bar: { groupWidth: "90%" },
-        legend: {
-            position: 'top',
-        },
-        tooltip: { trigger: 'both' },
+        colors: [mainBlue, dimGray, subGray],
 
-        backgroundColor: {
-            fill: 'none',
+        legend: {
+            position: 'bottom',
+            maxLines: 1,
         },
+        tooltip: { trigger: 'both' }
         // crosshair: {
         //     color: '#fff',
         //     trigger: 'selection'
         // },
 
-        showRowNumber: false,
-        colors: [mainBlue, dimGray, mainGray],
+        // showRowNumber: true,
     };
 
     const element = document.getElementById(id);
     var chart = new google.charts.Bar(element);
+
     chart.draw(data, options);
 };
 
@@ -155,72 +144,6 @@ function drawChart_cost({ id, title }) {
 02. 배우 필모그라피  Top 20
 ---------------------*/
 
-async function drawChart() {
-    const filmo = await (await fetch('./src/data/actors_filmo.json')).json();
-
-    const actor = filmo.filter(i => i.주연배우 === '안성기');
-    // document.getElementById('actors_filmo').innerHTML = `${actor.map(actor => `<p>${actor.주연배우} - ${actor.필모갯수}</p>`).join('')}`;
-    const data = new google.visualization.DataTable();
-
-    data.addColumn(['string', '주연배우']);
-    data.addColumn(['number', '필모갯수']);
-    // data.addColumn(['string', '배우필모']);
-
-    for (i in filmo) {
-        // var style = i.배우성별 == "여자" ? mainBlue : dimGray;
-        data.addRows([i.주연배우, i.필모갯수]);
-    };
-
-    const element = document.getElementById('actors_filmo');
-    var chart = new google.charts.Bar(element);
-
-    chart.draw(data);
-}
-
-
-// function drawChart_actor_filmo({ id }) {
-//     const data = google.visualization.arrayToDataTable([
-//         ['year', '이경미', '김한민', '강형철'],
-//         ['2008', 10, { v: 3, f: '0' }, 25],
-//         ['2011', { v: 3, f: '0' }, 60, 40],
-//         ['2013', { v: 3, f: '0' }, 145, { v: 3, f: '0' }],
-//         ['2014', { v: 3, f: '0' }, { v: 3, f: '0' }, 80],
-//         ['2015', 42, { v: 3, f: '0' }, { v: 3, f: '0' }],
-//         ['2018', { v: 3, f: '0' }, { v: 3, f: '0' }, 157],
-//     ]);
-//     const options = {
-//         chart: {
-//             title: '제작비 비교',
-//             subtitle: '비슷한 시기에 신인 감독상을 받은 감독들의 연도별 작품 제작비 비교'
-//         },
-//         hAxis: {
-//             gridlines: 'none',
-//             textPosition: 'none',
-//         },
-//         vAxis: {
-
-//             gridlines: 'none',
-//             title: '제작비(단위: 억원)',
-//             format: 'decimal',
-//             textPosition: 'none',
-//         },
-//         bar: { groupWidth: "90%" },
-//         colors: [mainBlue, dimGray, subGray],
-
-//         legend: {
-//             position: 'bottom',
-//             maxLines: 1,
-//         },
-//         tooltip: { trigger: 'both' }
-
-//     };
-
-//     const element = document.getElementById(id);
-//     var chart = new google.charts.Bar(element);
-
-//     chart.draw(data, options);
-
-// }
 
 
 
@@ -235,41 +158,33 @@ function drawChart1({ id, title, men, wom }) {
 
     const data = google.visualization.arrayToDataTable([
         ['Element', 'Value', { type: 'string', role: 'tooltip' }, { role: 'style' }],
-        ['여자', womPercent, `${wom}명\n${womPercent}%`, 'color: #0060ff'],
         ['남자', menPercent, `${men}명\n${menPercent}%`, 'color: #979797'],
+        ['여자', womPercent, `${wom}명\n${womPercent}%`, 'color: #0060ff'],
     ]);
 
     const options = {
+        title,
         // fontName: 'CourierNewPSMT',
         // colors: ['#979797', '#0060ff', '#0060ff'],
         bar: { groupWidth: "70%" },
         legend: { position: "none" },
-        pieHole: 0.5,
-
-        slices: {
-            0: { color: mainBlue },
-            1: { color: dimGray },
+        hAxis: {
+            title: '',
+            minorGidelines: {
+                color: '#0060ff'
+            }
         },
-        pieStartAngle: 0,
-
-        // // 바차트
-        // hAxis: {
-        //     title: '',
-        //     minorGidelines: {
-        //         color: '#0060ff'
-        //     }
-        // },
-        // vAxis: {
-        //     title: '',
-        //     textStyle: { color: '#fff' },
-        //     gridlines: { color: 'white' },
-        //     baselineColor: 'white'
-        // },
+        vAxis: {
+            title: '',
+            textStyle: { color: '#fff' },
+            gridlines: { color: 'white' },
+            baselineColor: 'white'
+        },
         // tooltip: { isHtml: true }
     };
 
     const element = document.getElementById(id);
-    const chart = new google.visualization.PieChart(element);
+    const chart = new google.visualization.ColumnChart(element);
     chart.draw(data, options);
 };
 

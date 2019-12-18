@@ -7,15 +7,6 @@ ul {
     list-style: none;
 }
 
-
-/* 
-body,
-ol,
-ul {
-    margin: 0;
-    padding: 0;
-} */
-
 h1,
 h2,
 h3,
@@ -35,9 +26,14 @@ a:hover {
     transition: none;
 }
 
+.intro {
+    padding: 5vh 0;
+}
+
 .container {
-    padding: 2vh 0 0 0;
     margin: 0 0 0 0;
+    padding: 0 0;
+    text-align: center;
 }
 
 .clear {
@@ -51,10 +47,19 @@ a:hover {
     padding: 0;
 }
 
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
+
 .Finding-Copy {
     max-width: 836px;
     max-height: 131px;
-    display: inline;
+    float: left;
     font-family: CourierNewPSMT;
     font-size: 7.7vw;
     font-weight: normal;
@@ -87,11 +92,10 @@ a:hover {
 
 .line-f {
     display: inline-block;
-    width: 44vw;
-    max-width: 45%;
+    width: 47%;
     height: 0.2vh;
     background-color: black;
-    margin: auto auto 1.5vw 1.1vw;
+    margin: auto auto;
 }
 
 .ticket {
@@ -100,8 +104,8 @@ a:hover {
     transform: rotate(-9deg);
     box-shadow: 16px 65px 34px 0 rgba(131, 131, 131, 0.5);
     display: block;
-    margin: 0px auto 10%;
-    max-width: 85%;
+    margin: 0px auto;
+    max-width: 90%;
     height: auto;
 }
 
@@ -145,9 +149,22 @@ a:hover {
        ********** 본문 **********
 ====================================== */
 
-.page {
+.fitpage {
+    height: fit-content;
+    padding: 5vh 0;
+}
+
+.fullpage {
     height: 100vh;
-    width: 100vw;
+    padding: 5vh 0;
+}
+
+.page {
+    height: 80vh;
+    padding: 5vh 0;
+}
+
+.intro1 {
     clear: both;
     background-color: #fff8e5;
 }
@@ -165,7 +182,7 @@ a:hover {
 
 .text1 {
     display: block;
-    margin: 8vh auto;
+    margin: 0 auto;
     font-family: NotoSansCJKkr;
     font-size: 2vw;
     font-weight: bold;
@@ -176,13 +193,30 @@ a:hover {
 
 .text1_2 {
     display: block;
-    margin: 4vh auto;
     font-family: NotoSansCJKkr;
     font-size: 1.5vw;
     font-weight: 600;
     line-height: 4vh;
     text-align: center;
     color: #000000;
+}
+
+.textbody {
+    display: block;
+    margin: 4vh auto;
+    font-family: NotoSansCJKkr;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 4vh;
+    text-align: center;
+    color: #000000;
+}
+
+.hypo {
+    color: #0060ff;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
 }
 
 h3 .text1_2 {
@@ -203,13 +237,13 @@ h3 .text1_2 {
 
 .text2 {
     display: block;
-    margin: 8vh auto 8vh 0;
-    width: 465px;
+    margin: 4vh auto 4vh 0;
+    width: 100%;
     font-family: NotoSansCJKkr;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     font-weight: bold;
     line-height: 1.50;
-    text-align: left;
+    text-align: center;
     color: #000000;
 }
 
@@ -218,11 +252,15 @@ h3 .text1_2 {
     /* margin: 8vh auto 8vh 0;
     width: 465px; */
     font-family: NotoSansCJKkr;
-    font-size: 1vw;
-    font-weight: bold;
+    font-size: 1.5vw;
+    font-weight: medium;
     line-height: 1.50;
-    text-align: left;
+    text-align: center;
     color: #000000;
+}
+
+.s-description {
+    font-size: 1.2vw;
 }
 
 .wrap {
@@ -283,6 +321,13 @@ h3 .text1_2 {
 }
 
 .man-color {
+    color: #979797;
+}
+
+.closing2 {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 2;
     color: #979797;
 }
 

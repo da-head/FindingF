@@ -23,10 +23,18 @@
 <body id=page-top>
 
     <!-- 00. 제작비 비교 -->
-    <div id="production_cost">
+    <h1>제작비 비교</h1>
+    <div id="production_cost" style="display: inline-block; padding: 10vw 5vw; width: 80vw; height: 60vw;">
+    </div>
+
+    <!-- 01. 배우 비교 -->
+    <div style="display: inline-block; padding: 10 auto">
+        <h1>한국 배우 필모그라피 TOP 20</h1>
+        <div id="actors_filmo"></div>
     </div>
 
     <!-- 01. 성비 비교-->
+    <h1>성비 비교</h1>
     <div id="srate_chart">
         <div id="chart-director" style="display: inline-block; width: 30vw; height: 30vw;"></div>
         <div id="chart-writer" style="display: inline-block; width: 30vw; height: 30vw;"></div>
@@ -51,6 +59,7 @@
 
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/chart.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
 </body>
 
 </html>

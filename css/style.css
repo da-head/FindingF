@@ -46,8 +46,6 @@
     background-position: center center;
 }
 
-.overlay-mf {}
-
 .overlay-mf {
     position: absolute;
     top: 0;
@@ -571,7 +569,7 @@
     height: 100vh;
     margin-top: 3vh;
     position: relative;
-    /* color: #fff; */
+    color: #fff;
 }
 
 .intro .intro-content {

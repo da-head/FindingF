@@ -67,4 +67,61 @@
     }
 </script>
 
+
+
+<!--plotly-->
+<div id="myDiv">
+    <!-- Plotly chart will be drawn inside this DIV -->
+</div>
+<script>
+    var lee = {
+        x: ['2008', '2011', '2013', '2014', '2015', '2018'],
+        y: [10, 0, 0, 0, 42, 0],
+        type: 'bar'
+    };
+    var lee1 = {
+        x: ['2008', '2011', '2013', '2014', '2015', '2018'],
+        y: [10, 0, 0, 0, 42, 0],
+        type: 'scatter'
+    };
+    var kim = {
+        x: ['2008', '2011', '2013', '2014', '2015', '2018'],
+        y: [25, 40, 145, 0, 0, 0],
+        type: 'bar'
+    };
+    var kim1 = {
+        x: ['2008', '2011', '2013', '2014', '2015', '2018'],
+        y: [25, 40, 145, 0, 0, 0],
+        type: 'scatter'
+    };
+
+    var kang = {
+        x: ['2008', '2011', '2013', '2014', '2015', '2018'],
+        y: [24, 40, 0, 80, 0, 157],
+        type: 'bar',
+        textposition: 'auto',
+        hoverinfo: 'none',
+        marker: {
+            color: '#979797',
+        }
+    };
+
+    var kang1 = {
+        x: ['2008', '2011', '2013', '2014', '2015', '2018'],
+        y: [24, 40, 0, 80, 0, 157],
+        type: 'scatter',
+        line: {
+            color: '#979797',
+            width: 1,
+            opacity: 30
+        }
+    };
+
+    var data = [lee, kim, kang, lee1, kim1, kang1];
+
+    Plotly.newPlot('myDiv', data, {}, {
+        showSendToCloud: true
+    });
+</script>
+
 </html>
