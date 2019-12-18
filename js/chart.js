@@ -13,7 +13,11 @@ const mainGray = '#979797' /*진함*/
 const subGray = '#c1c1c1'
 const dimGray = '#dadada' /*연함*/
 
+const yellow = '#f5f500'
+
+
 const bgcolor = '#fff8e5' /*아이보리*/
+
 
 // // json -> html로 데이터 어떻게 불러오는지 샘플
 // const allMovies = await (await fetch('./src/data/films.json')).json();
@@ -244,11 +248,11 @@ function drawChart1({ id, title, men, wom }) {
         // colors: ['#979797', '#0060ff', '#0060ff'],
         bar: { groupWidth: "70%" },
         legend: { position: "none" },
-        pieHole: 0.5,
+        pieHole: 0.6,
 
         slices: {
             0: { color: mainBlue },
-            1: { color: dimGray },
+            1: { color: mainGray },
         },
         pieStartAngle: 0,
 
@@ -332,7 +336,7 @@ function drawChart3({ id, title }) {
         // fontSize: 12,
         slices: {
             0: { color: mainBlue },
-            1: { color: subGray },
+            1: { color: mainGray },
         }
     };
 
