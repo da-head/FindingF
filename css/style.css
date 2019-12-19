@@ -42,6 +42,18 @@
     background-color: #0062d3;
 }
 
+.overlay-mf.yellow {
+    background-color: #f5f500;
+}
+
+.overlay-mf.red {
+    background-color: #ff0000;
+}
+
+.overlay-mf.black {
+    background-color: black;
+}
+
 .overlay-mf {
     position: absolute;
     top: 0;
@@ -442,30 +454,30 @@
 }
 
 .navbar-b.navbar-reduce .nav-link {
-    color: #0078ff;
+    color: #1B1B1B;
 }
 
 .navbar-b.navbar-reduce .nav-link:before {
-    background-color: #0078ff;
+    background-color: #1B1B1B;
 }
 
 .navbar-b.navbar-reduce .nav-link:hover {
-    color: #0078ff;
+    color: #1B1B1B;
 }
 
 .navbar-b.navbar-reduce .show>.nav-link,
 .navbar-b.navbar-reduce .active>.nav-link,
 .navbar-b.navbar-reduce .nav-link.show,
 .navbar-b.navbar-reduce .nav-link.active {
-    color: #0078ff;
+    color: #4e4e4e;
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
-    color: #0078ff;
+    color: #1B1B1B;
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {
-    background-color: #1B1B1B;
+    background-color: #4e4e4e;
 }
 
 .navbar-b .navbar-brand {
@@ -493,13 +505,13 @@
 }
 
 .navbar-b .dropdown-menu .dropdown-item:hover {
-    background-color: #0078ff;
+    background-color: #1B1B1B;
     color: #fff;
     transition: all 500ms ease;
 }
 
 .navbar-b .dropdown-menu .dropdown-item.active {
-    background-color: #0078ff;
+    background-color: #1B1B1B;
 }
 
 
@@ -1029,7 +1041,7 @@
 ======================================*/
 
 .footer-paralax {
-    padding: 4rem 0 0 0;
+    padding: 2rem 0 0 0;
 }
 
 .contact-mf {
@@ -1044,7 +1056,7 @@
 footer {
     text-align: center;
     color: #fff;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 footer .copyright {

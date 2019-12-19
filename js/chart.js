@@ -19,6 +19,11 @@ const yellow = '#f5f500'
 const bgcolor = '#fff8e5' /*아이보리*/
 
 
+const button = document.getElementById('change');
+var current = 0;
+
+
+
 // // json -> html로 데이터 어떻게 불러오는지 샘플
 // const allMovies = await (await fetch('./src/data/films.json')).json();
 
@@ -37,9 +42,6 @@ async function onReady() {
     // drawChart_actor_filmo({
     //     id: 'actors_filmo'
     // })
-
-    drawChart();
-
     // drawChart1 - 직군별 성비
     drawChart1({
         id: 'chart-director',
@@ -74,6 +76,13 @@ async function onReady() {
         wom: 900,
     });
 
+    //한국 영화산업, F-등급으로 다시보기
+    changingData();
+    button.onclick = function() {
+        current = 1 - current;
+        changingData();
+    }
+
     // #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트
     drawChart2({
         id: 'donut-filmmaking',
@@ -105,7 +114,7 @@ async function onReady() {
     drawChart3({
         id: 'top10-donut',
         title: '전체 상영횟수의 87%를 차지하는 상위 10대 배급사'
-    })
+    });
 };
 
 /*----------------------------------------*/
@@ -124,6 +133,7 @@ function drawChart_cost({ id, title }) {
     const data = google.visualization.arrayToDataTable([
         ['year', '이경미', '김한민', '강형철'],
         ['2008', 10, { v: 3, f: '0' }, 25],
+        ['2009', { v: 3, f: '0' }, 30, { v: 3, f: '0' }],
         ['2011', { v: 3, f: '0' }, 60, 40],
         ['2013', { v: 3, f: '0' }, 145, { v: 3, f: '0' }],
         ['2014', { v: 3, f: '0' }, { v: 3, f: '0' }, 80],
@@ -171,30 +181,36 @@ function drawChart_cost({ id, title }) {
 };
 
 /*-------------------
+01_2. 감독 제작비 비교 누적 bar
+---------------------*/
+
+
+/*-------------------
 02. 배우 필모그라피  Top 20
 ---------------------*/
 
-async function drawChart() {
-    const filmo = await (await fetch('./src/data/actors_filmo.json')).json();
+// async function drawChart() {
+//     const filmo = await (await fetch('./src/data/actors_filmo.json')).json();
 
-    const actor = filmo.filter(i => i.주연배우 === '안성기');
-    // document.getElementById('actors_filmo').innerHTML = `${actor.map(actor => `<p>${actor.주연배우} - ${actor.필모갯수}</p>`).join('')}`;
-    const data = new google.visualization.DataTable();
+//     const actor = filmo.filter(i => i.주연배우 === '안성기');
+//     // document.getElementById('actors_filmo').innerHTML = `${actor.map(actor => `<p>${actor.주연배우} - ${actor.필모갯수}</p>`).join('')}`;
+//     const data = new google.visualization.DataTable();
 
-    data.addColumn(['string', '주연배우']);
-    data.addColumn(['number', '필모갯수']);
-    // data.addColumn(['string', '배우필모']);
+//     data.addColumn(['string', '주연배우']);
+//     data.addColumn(['number', '필모갯수']);
+//     data.addColumn(['string', '배우필모']);
 
-    for (i in filmo) {
-        // var style = i.배우성별 == "여자" ? mainBlue : dimGray;
-        data.addRows([i.주연배우, i.필모갯수]);
-    };
+//         for (i in filmo) {
+//             // var style = i.배우성별 == "여자" ? mainBlue : dimGray;
+//             data.addRows([i.주연배우, i.필모갯수]);
+//         };
 
-    const element = document.getElementById('actors_filmo');
-    var chart = new google.charts.Bar(element);
+//         const element = document.getElementById('actors_filmo');
+//         var chart = new google.charts.Bar(element);
 
-    chart.draw(data);
-}
+//         chart.draw(data);
+//     }
+// };
 
 
 // function drawChart_actor_filmo({ id }) {
@@ -239,9 +255,7 @@ async function drawChart() {
 
 //     chart.draw(data, options);
 
-// }
-
-
+// };
 
 
 
@@ -285,13 +299,13 @@ function drawChart1({ id, title, men, wom }) {
 
 function createCustomHTMLContent(gender, quantity, percentage) {
     if (gender == '여성') {
-        return '<div style=" padding: 10px 12px;">' +
+        return '<div style="padding: 10px 12px; text-align: left;">' +
             '<div><h6 style="color : #0060ff"><strong>' + gender + '</strong><h6></div><hr>' +
             '<div><h6>' + quantity + '명 </h6></div>' +
             '<div><h6>`' + percentage + '%`</h6></div>' +
             '</div>';
     };
-    return '<div style=" padding: 10px 12px;">' +
+    return '<div style="padding: 10px 12px; text-align: left;">' +
         '<div><h6 style="color : #c1c1c1"><strong>' + gender + '</strong><h6></div><hr>' +
         '<div><h6>' + quantity + '명 </h6></div>' +
         '<div><h6>`' + percentage + '%`</h6></div>' +
@@ -302,6 +316,75 @@ function createCustomHTMLContent(gender, quantity, percentage) {
 /*-------------------
 03. #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트
 ---------------------*/
+function changingData() {
+
+    var rowData1 = [
+        ['등급', { label: 'count', type: 'number' }],
+        ['F-3', 49],
+        ['F-2', 63],
+        ['F-1', 208],
+        ['F-0', 342],
+    ];
+
+    var rowData2 = [
+        ['등급', { label: 'count', type: 'number' }],
+        ['F-3', 4],
+        ['F-2', 5],
+        ['F-1', 23],
+        ['F-0', 70],
+    ];
+    // Create and populate the data tables.
+    var data = [];
+    data[0] = google.visualization.arrayToDataTable(rowData1);
+    data[1] = google.visualization.arrayToDataTable(rowData2);
+
+
+    const options = {
+        pieHole: 0.5,
+        pieStartAngle: 0,
+        // legend: 'none',
+        // pieSliceText: 'none',
+        // fontName: 'CourierNewPSMT',
+        // fontSize: 'auto',
+        slices: {
+            0: { color: mainBlue },
+            1: { color: subBlue },
+            2: { color: subGray },
+            3: { color: dimGray },
+        },
+        pieSliceTextStyle: {
+            color: 'black',
+        },
+        backgroundColor: {
+            fill: 'none',
+        },
+        animation: {
+            duration: 1000,
+            easing: 'out'
+        },
+
+    };
+
+    // Create and draw the visualization.
+    const element = document.getElementById('user-distribution');
+    const chart = new google.visualization.PieChart(element);
+
+
+    // Disabling the button while the chart is drawing.
+    button.disabled = true;
+    google.visualization.events.addListener(chart, 'ready',
+        function() {
+            button.disabled = false;
+            button.value = (current ? '5년간 제작된 영화' : '5년 총 관람객') + ' 보기';
+        });
+    options['title'] = '단계별' + (current ? '총 제작 영화의' : '총 관람객의') + ' F등급 분포';
+    chart.draw(data[current], options);
+};
+
+
+/*-------------------
+03_2. changing data
+---------------------*/
 function drawChart2({ id, title, f0, f1, f2, f3 }) {
 
     const data = google.visualization.arrayToDataTable([
@@ -311,6 +394,8 @@ function drawChart2({ id, title, f0, f1, f2, f3 }) {
         ['F-1', f1, `f-1: ${f1}%`],
         ['F-0', f0, `f-0: ${f0}%`],
     ]);
+
+
 
     const options = {
         // title,
@@ -329,6 +414,10 @@ function drawChart2({ id, title, f0, f1, f2, f3 }) {
         pieSliceTextStyle: {
             color: 'black',
         },
+        backgroundColor: {
+            fill: 'none',
+        },
+
     };
 
     const element = document.getElementById(id);
@@ -367,4 +456,4 @@ function drawChart3({ id, title }) {
 
     chart.draw(data, options);
 
-}
+};
