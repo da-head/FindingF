@@ -88,7 +88,8 @@
             <div class="clear"></div>
         </div>
 
-        <div class="intro1 fitpage sect-4" style="vertical-align: middle;">
+        <!--전체 배우 필모 흐름-->
+        <!-- <div class="intro1 fitpage sect-4" style="vertical-align: middle;">
             <div class="text1 title-a" style="height: 10%;">
                 한국 배우들의 필모그래피를 전반적으로 볼까요?
             </div>
@@ -104,7 +105,8 @@
                     <br>플롯차트로 더 자세하게 살펴보면, 평균값은 비슷하지만 최댓값과 아웃라이어가 다른 것을 확인할 수 있습니다.
                 </div>
             </div>
-        </div>
+        </div> -->
+
     </section>
 
     <!--  Section02 EDA-->
@@ -190,58 +192,56 @@
 
     </section>
 
-
-    <hr>
-
-
     <!--  Section03 영화의 성평등 지수를 평가하는 여러 지표-->
     <section id="frated ">
         <!-- 여러 영화 성평등 지수 지표-->
-        <div class="container page ">
+        <div class="page sect-pt4">
             <p class="text1_2 ">영화의 성평등 지수는 어떻게 평가할 수 있을까요?</p>
-            <p class="text1 ">영화의 성평등 지수를 평가하는 여러 지표가 있습니다.</p>
-            <img src="img/dummy/1.jpg " style="width:100vh; ">
-        </div>
-        <hr>
-        <!-- f-rated 설명 -->
-        <div class="container fullpage ">
-            <img src="img/chapter02/f_rated_logo.png " style="width:30%; ">
-            <div class="container " style="width:60vw; margin-top:0 ">
-                <img src="img/fffooo.gif " style="width:100%; margin-bottom: 5%; ">
-                <p class="text1_2 " style="margin: 3vh auto; ">그 중 정량적 평가를 할 수 있는 F-Rated로 영화를 평가해 보겠습니다.</p>
-                <p class="text-small " style="margin: 3vh auto; ">영화의 내용을 모두 파악해야 평가를 할 수 있는 나머지 4개 테스트와 다르게 <br>F-rated는 데이터만으로 평가가 가능하며, 좀 더 산업 구조적인 측면에서 접근합니다.</p>
-            </div>
-            <button id="btn_macomori"></button>
-            <button id="btn_bechdel"></button>
-            <button id="btn_sexylamp"></button>
-            <button id="btn_wir"></button>
-            <button id="btn_f-rated"></button>
-            <!-- <p class="text1_2 ">
-                2014년 영국의 바스 영화제(Bath Film Festival)의 프로듀서 홀리 타퀴니(Holly Tarquini)가 만든 지표.
-            </p>
-            <p class="text1_2 ">
-                여성(‘Female’)을 뜻하는 F
-            </p>
+            <p class="text1">영화의 성평등 지수를 평가하는 여러 지표가 있습니다.</p>
             <div>
-                <span style="display: inline-block; width: 27%; padding: 2.5% ">
-                    여성 감독이 연출했는지
-                </span>
-                <span style="display: inline-block; width: 27%; padding: 2.5% ">
-                    여성 작가가 각본을 썼는지
-                </span>
-                <span style="display: inline-block; width: 27%; padding: 2.5% ">
-                    여성 캐릭터가 중요한 역할을 하는지
-                </span> -->
-            <!-- </div>
-        <div>
-            한 영화를 위의 조건으로 평가한다. 조건을 모두 만족하는 영화는 트리플 F등급이라고 한다.
-            <br> 참고 : 여성신문(http://www.womennews.co.kr), http://F 등급.org/
-        </div> -->
+                <div class="row" style="display: inline;">
+                    <button id="btn_macomori" class="col-md-2 button" style="border-right: 0.1vh solid black;">벡델테스트<br><p style="font-size: small;">Bechdel Test</p></button>
+                    <button id="btn_bechdel" class="col-md-2 button" style="border-right: 0.1vh solid black;">마코모리<br><p style="font-size: small;">Mako Mori Test</p></button>
+                    <button id="btn_sexylamp" class="col-md-2 button" style="border-right: 0.1vh solid black;">섹시한램프<br><p style="font-size: small;">Sexy Lamp Test</p></button>
+                    <button id="btn_wir" class="col-md-2 button" style="border-right: 0.1vh solid black;">냉장고 속의 여자<br><p style="font-size: small;">Women in Refrigerators</p></button>
+                    <button id="btn_f-rated" class="col-md-2 button" style="border-right: 0.1vh solid black;">F등급<br><p style="font-size: small;">F-Rated</p></button>
+                </div>
+            </div>
+            <div>
+                <div class="row" style="display: inline;">
+                    <div class="col-md-10" style="display: inline-block; height: 0.1vh; background-color: black;"></div>
+                </div>
+            </div>
+            <div class="col-sm-10" style="display: inline-block; -ms-flex: 0 0 86%; flex: 0 0 86%; max-width: 86%;">
+                <div class="row">
+                    <div class=" col-md-6 " style="padding: 0; display: inline-block; ">
+                        <img class="img-fluid " src="img/sect03_rate_model/test01.png ">
+                    </div>
+                    <div class="col-md-6 text-left" style="padding: 1.5vw; display: inline-block; ">
+                        <strong>마코모리 Mako Mori Test</strong><br>
+                        <small>마코 모리 테스트(Mako Mori Test)는 벡델테스트를 보완하기 위해 만들어진 미디어 테스트입니다. 영화 [퍼시픽 림]의 등장인물 마코 모리의 이름에서 유래했으며, 벡델 테스트처럼 세 가지 지문이 주어지며 모두 충족시켜야 통과할 수 있습니다.<br>
+                        영화에 여성이 얼마나 등장하는지보다 여성이 중심 인물로서 얼마나 비중있고 정형성에서 벗어나 있는지를 따지는 테스트입니다.
+                        <br>- 최소 한 명의 여성이 등장하는가? 
+                        <br>- 그 여성이 자신의 이야기를 가지고 있는가? 
+                        <br>- 그 이야기가 남성 인물의 이야기를 보조하는데 그치진 않는가?</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- f-rated 설명 -->
+        <div class="page bgi">
+            <div class="container">
+                <img src="img/chapter02/f_rated_logo.png " style="width:30%; ">
+                <div class="container " style="width:60vw; margin-top:0 ">
+                    <img src="img/fffooo.gif " style="width:100%; margin-bottom: 5%; ">
+                    <p class="text1_2 " style="margin: 3vh auto; ">그 중 정량적 평가를 할 수 있는 F-Rated로 영화를 평가해 보겠습니다.</p>
+                    <p class="text-small " style="margin: 3vh auto; ">영화의 내용을 모두 파악해야 평가를 할 수 있는 나머지 4개 테스트와 다르게 <br>F-rated는 데이터만으로 평가가 가능하며, 좀 더 산업 구조적인 측면에서 접근합니다.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-
-    <hr>
     <!--  Section04 사용한 데이터에 관하여 -->
     <section class="useddata container page " style="height: 70vh; ">
         <div class="row ">

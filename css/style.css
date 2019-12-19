@@ -1113,8 +1113,8 @@ footer .credits a {
     -ms-user-select: none;
     user-select: none;
     font-size: 1rem;
-    border-radius: .3rem;
-    border: 1px solid transparent;
+    /* border-radius: .3rem; */
+    border: 0px solid transparent;
     transition: all 500ms ease;
     cursor: pointer;
 }
@@ -1124,13 +1124,13 @@ footer .credits a {
 }
 
 .button:hover {
-    background-color: #0062d3;
+    background-color: #0060ff;
     color: #fff;
     transition: all 500ms ease;
 }
 
 .button-a {
-    background-color: #0078ff;
+    background-color: #0060ff;
     color: #fff;
     border-color: #cde1f8;
 }

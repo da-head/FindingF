@@ -43,7 +43,7 @@ a:hover {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
-    margin-left: -15px
+    margin-left: -15px;
 }
 
 .Finding-Copy {
@@ -156,7 +156,7 @@ a:hover {
 
 .page {
     height: 80vh;
-    padding: 2vh 0 2vh 0;
+    padding: 5vh 0 5vh 0;
     text-align: center;
 }
 
@@ -185,7 +185,7 @@ a:hover {
 
 .text1 {
     display: block;
-    margin: 4vh auto 0;
+    margin: 4vh auto;
     font-family: NotoSansCJKkr;
     font-size: 2vw;
     font-weight: bold;
