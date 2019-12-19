@@ -60,6 +60,20 @@ async function onReady() {
         wom: 226,
     });
 
+    drawChart1({
+        id: 'man-director',
+        title: '남성 감독의 여성 작가,배우 기용률',
+        men: 900,
+        wom: 300,
+    });
+
+    drawChart1({
+        id: 'wom-director',
+        title: '여성 감독의 여성 작가,배우 기용률',
+        men: 100,
+        wom: 900,
+    });
+
     // #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트
     drawChart2({
         id: 'donut-filmmaking',
@@ -133,8 +147,9 @@ function drawChart_cost({ id, title }) {
             textPosition: 'none',
         },
         bar: { groupWidth: "90%" },
+        bars: 'vertical',
         legend: {
-            position: 'top',
+            position: 'none',
         },
         tooltip: { trigger: 'both' },
 
@@ -238,9 +253,9 @@ function drawChart1({ id, title, men, wom }) {
     const womPercent = Math.round(100 * wom / (men + wom) * 10) / 10;
 
     const data = google.visualization.arrayToDataTable([
-        ['Element', 'Value', { type: 'string', role: 'tooltip' }, { role: 'style' }],
-        ['여자', womPercent, `${wom}명\n${womPercent}%`, 'color: #0060ff'],
-        ['남자', menPercent, `${men}명\n${menPercent}%`, 'color: #979797'],
+        ['Element', 'Value', { type: 'string', role: 'tooltip', 'p': { 'html': true } }, { role: 'style' }],
+        ['여자', womPercent, createCustomHTMLContent('여성', `${wom}`, `${womPercent}`), 'color: #0060ff'],
+        ['남자', menPercent, createCustomHTMLContent('남성', `${men}`, `${menPercent}`), 'color: #979797'],
     ]);
 
     const options = {
@@ -254,28 +269,35 @@ function drawChart1({ id, title, men, wom }) {
             0: { color: mainBlue },
             1: { color: mainGray },
         },
-        pieStartAngle: 0,
 
-        // // 바차트
-        // hAxis: {
-        //     title: '',
-        //     minorGidelines: {
-        //         color: '#0060ff'
-        //     }
-        // },
-        // vAxis: {
-        //     title: '',
-        //     textStyle: { color: '#fff' },
-        //     gridlines: { color: 'white' },
-        //     baselineColor: 'white'
-        // },
-        // tooltip: { isHtml: true }
+        pieStartAngle: 0,
+        focusTarget: 'category',
+        tooltip: { isHtml: true },
+        backgroundColor: {
+            fill: 'none',
+        },
     };
 
     const element = document.getElementById(id);
     const chart = new google.visualization.PieChart(element);
     chart.draw(data, options);
 };
+
+function createCustomHTMLContent(gender, quantity, percentage) {
+    if (gender == '여성') {
+        return '<div style=" padding: 10px 12px;">' +
+            '<div><h6 style="color : #0060ff"><strong>' + gender + '</strong><h6></div><hr>' +
+            '<div><h6>' + quantity + '명 </h6></div>' +
+            '<div><h6>`' + percentage + '%`</h6></div>' +
+            '</div>';
+    };
+    return '<div style=" padding: 10px 12px;">' +
+        '<div><h6 style="color : #c1c1c1"><strong>' + gender + '</strong><h6></div><hr>' +
+        '<div><h6>' + quantity + '명 </h6></div>' +
+        '<div><h6>`' + percentage + '%`</h6></div>' +
+        '</div>';
+
+}
 
 /*-------------------
 03. #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트

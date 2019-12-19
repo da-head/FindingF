@@ -143,33 +143,25 @@ a:hover {
 
 .fitpage {
     height: fit-content;
-    width: 100%;
-    padding: 2.5vh 0;
+    padding: 5vh 0;
     text-align: center;
 }
 
 .fullpage {
     height: 100vh;
-    padding: 2.5vh 0;
+    padding: 5vh 0;
     text-align: center;
 }
 
 .page {
     height: 80vh;
-    padding: 2vh 0 2vh 0;
+    padding: 8vh 0 4vh 0;
     text-align: center;
 }
 
 .intro1 {
     clear: both;
-}
-
-.bgi {
     background-color: #fff8e5;
-}
-
-.bgw {
-    background-color: white;
 }
 
 @media (max-width: 700px) {
@@ -185,7 +177,7 @@ a:hover {
 
 .text1 {
     display: block;
-    margin: 4vh auto 0;
+    margin: 0 auto;
     font-family: NotoSansCJKkr;
     font-size: 2vw;
     font-weight: bold;
@@ -204,11 +196,12 @@ a:hover {
     color: #000000;
 }
 
-.text1_3 {
+.textbody {
     display: block;
+    margin: 4vh auto;
     font-family: NotoSansCJKkr;
-    font-size: 1.1vw;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 4vh;
     text-align: center;
     color: #000000;
