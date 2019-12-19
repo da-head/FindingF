@@ -375,7 +375,7 @@
 .navbar-b.navbar-trans .nav-item,
 .navbar-b.navbar-reduce .nav-item {
     position: relative;
-    padding-right: 10px;
+    /* padding-right: 10px; */
     padding-left: 0;
 }
 
@@ -1105,7 +1105,7 @@ footer .credits a {
 
 .button {
     display: inline-block;
-    padding: .3rem .6rem;
+    padding: .6rem .6rem;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
@@ -1124,6 +1124,13 @@ footer .credits a {
 }
 
 .button:hover {
+    background-color: #0060ff;
+    color: #fff;
+    transition: all 500ms ease;
+}
+
+.button.active,
+.button .active {
     background-color: #0060ff;
     color: #fff;
     transition: all 500ms ease;

@@ -3,8 +3,35 @@ html {
 }
 
 ol,
-ul {
+ul,
+li {
     list-style: none;
+}
+
+
+/* input 기본 스타일 초기화 */
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+
+input::-ms-clear {
+    display: none;
+}
+
+
+/* input type number 에서 화살표 제거 */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 h1,
@@ -188,10 +215,16 @@ a:hover {
     margin: 4vh auto;
     font-family: NotoSansCJKkr;
     font-size: 2vw;
-    font-weight: bold;
+    /* letter-spacing: 0.05vw; */
+    /* word-spacing: 0.2vw; */
+    /* font-weight: bold; */
     line-height: 1.50;
     text-align: center;
     color: #000000;
+}
+
+.tbold {
+    font-weight: bold;
 }
 
 .text1_2 {
