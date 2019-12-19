@@ -88,36 +88,19 @@
             <div class="clear"></div>
         </div>
 
-        <!--전체 배우 필모 흐름-->
-        <!-- <div class="intro1 fitpage sect-4" style="vertical-align: middle;">
-            <div class="text1 title-a" style="height: 10%;">
-                한국 배우들의 필모그래피를 전반적으로 볼까요?
-            </div>
-            <div style="display:inline-block; height: 50%;">
-                <div class="col-md-6" style="display:inline-block;">
-                    <img src="img/chapter02/actors_top20.png " class="img-fluid ">
-                </div>
-                <div class="col-md-3 " style="display:inline-block; ">
-                    <img src="img/chapter02/actors_flow.png " class="img-fluid ">
-                </div>
-                <div class="description text1_2" style="height: 15%; padding: 7% ">
-                    성별에 따라 배우 필모 갯수와 필모 흐름도가 많이 달라집니다.
-                    <br>플롯차트로 더 자세하게 살펴보면, 평균값은 비슷하지만 최댓값과 아웃라이어가 다른 것을 확인할 수 있습니다.
-                </div>
-            </div>
-        </div> -->
+
 
     </section>
 
     <!--  Section02 EDA-->
-    <section class="bgi">
+    <section class="">
         <!-- <p class="text1 ">한국영화산업의 특성</p> -->
         <div class="page container">
             <!-- 표 1 성비 -->
             <p class="text1" style="z-index:3; ">
                 한국영화산업 속<br> 감독, 작가, 배우 성비를 비교해 볼까요?
             </p>
-            <div id="srate_chart" style="width: 100%; margin-top: -5%; ">
+            <div id="srate_chart" style="width: 100%; margin: -7% auto -4%; ">
                 <div style="display: inline-block; width: 30%; height:32vw;">
                     <h6 style="display: inline-block; position: relative; z-index:2; top: 20.5vw; left: 2.8vw "><strong>감독 성비</strong></h6>
                     <div id="chart-director" style="display: inline-block; width: 120%; height: 120%;"></div>
@@ -137,29 +120,30 @@
                 </p>
             </div>
         </div>
+
         <div class="clear "></div>
 
         <!-- 감독 성별 - 여성 기용률-->
-        <div class="container page">
-            <div id="srate_chart" style="width: 80%; margin: 0 auto;">
-                <div style="float:left; width: 50%; height: 40vw; ">
-                    <h6 style="display: inline-block; position: relative; z-index:2; top: 25vw; left: 2.8vw "><strong>남성 감독의 <br>여성 작가,배우 기용률</strong></h6>
-                    <div id="man-director" style="display: inline-block; position: relative; width: 120%; height: 120%; "></div>
+        <div class="bgi">
+            <div class="container page">
+                <div id="srate_chart" style="width: 80%; margin: -10% auto 0">
+                    <div style="float:left; width: 50%; height: 40vw; ">
+                        <h6 style="display: inline-block; position: relative; z-index:2; top: 25vw; left: 2.8vw "><strong>남성 감독의 <br>여성 작가,배우 기용률</strong></h6>
+                        <div id="man-director" style="display: inline-block; position: relative; width: 120%; height: 120%; "></div>
+                    </div>
+                    <div style="float:right; width: 50%; height: 40vw; ">
+                        <h6 style="display: inline-block; position: relative; z-index:2; top: 25vw; left: 2.8vw "><strong>여성 감독의 <br>여성 작가,배우 기용률</strong></h6>
+                        <div id="wom-director" style="display: inline-block; position: relative; width: 120%; height: 120%; "></div>
+                    </div>
+                    <div class="clear"></div>
                 </div>
-                <div style="float:right; width: 50%; height: 40vw; ">
-                    <h6 style="display: inline-block; position: relative; z-index:2; top: 25vw; left: 2.8vw "><strong>여성 감독의 <br>여성 작가,배우 기용률</strong></h6>
-                    <div id="wom-director" style="display: inline-block; position: relative; width: 120%; height: 120%; "></div>
+                <div style="padding: 10% 0; ">
+                    <p class="text1_2 ">일반적으로 감독 > 작가 > 배우 순으로 영향력이 높으며 감독의 영향력(=성별 기용 현황)을 보자면
+                        <br>남성 감독이 영화 제작시, 여성을 작가,주요 배우로 기용하고자 하는 고려가 별로 없습니다.
+                        <br>감독 성비 자체가 1:6으로 기울어 있으므로 감독-작가의 남성 비율이 높아 F-등급이 낮은 영화가 많을 수 밖에 없습니다.
+                    </p>
                 </div>
-                <div class="clear"></div>
             </div>
-            <div style="padding-bottom: 10%; ">
-                <p class="text1_2 ">일반적으로 감독 > 작가 > 배우 순으로 영향력이 높으며 감독의 영향력(=성별 기용 현황)을 보자면
-                    <br>남성 감독이 영화 제작시, 여성을 작가,주요 배우로 기용하고자 하는 고려가 별로 없습니다.
-                    <br>감독 성비 자체가 1:6으로 기울어 있으므로 감독-작가의 남성 비율이 높아 F-등급이 낮은 영화가 많을 수 밖에 없습니다.
-                </p>
-            </div>
-        </div>
-
         </div>
         <hr>
 
@@ -184,7 +168,7 @@
             <div class="container">
                 <div class="row">
                     <div class="text1" style="color:white; z-index: 2;">
-                        성별 자체가 영화인의 커리어에 영향을 주지 않았을까요?<br><br>영화 산업 내 젠더 불균형은<br>어떻게 측정할 수 있을까요?
+                        <strong>성별</strong>이 영화인의 커리어에 영향을 주지 않았을까요?<br><br>영화 산업 내 <strong>젠더 불균형</strong>을 체크해 볼 수 있나요?
                     </div>
                 </div>
             </div>
@@ -196,26 +180,58 @@
     <section id="frated ">
         <!-- 여러 영화 성평등 지수 지표-->
         <div class="page sect-pt4">
-            <p class="text1_2 ">영화의 성평등 지수는 어떻게 평가할 수 있을까요?</p>
+            <p class="text1_2" class="">영화 성평등 지수 평가</p>
             <p class="text1">영화의 성평등 지수를 평가하는 여러 지표가 있습니다.</p>
-            <div>
-                <div class="row" style="display: inline;">
-                    <button id="btn_macomori" class="col-md-2 button" style="border-right: 0.1vh solid black;">벡델테스트<br><p style="font-size: small;">Bechdel Test</p></button>
-                    <button id="btn_bechdel" class="col-md-2 button" style="border-right: 0.1vh solid black;">마코모리<br><p style="font-size: small;">Mako Mori Test</p></button>
-                    <button id="btn_sexylamp" class="col-md-2 button" style="border-right: 0.1vh solid black;">섹시한램프<br><p style="font-size: small;">Sexy Lamp Test</p></button>
-                    <button id="btn_wir" class="col-md-2 button" style="border-right: 0.1vh solid black;">냉장고 속의 여자<br><p style="font-size: small;">Women in Refrigerators</p></button>
-                    <button id="btn_f-rated" class="col-md-2 button" style="border-right: 0.1vh solid black;">F등급<br><p style="font-size: small;">F-Rated</p></button>
-                </div>
+
+            <!-- <ul class="navbar-nav row" style="display: inline;">
+                <li class="nav-item">
+                    <a id="btn_macomori" class="col-md-2 button" style="border-right: 0.1vh solid black;" onclick="changebtn('01bechdel')">벡델테스트<br><p style="font-size: small;">Bechdel Test</p></a>
+                </li>
+                <li class="nav-item">
+                    <a id="btn_bechdel" class="col-md-2 button" style="border-right: 0.1vh solid black;">마코모리<br><p style="font-size: small;">Mako Mori Test</p></a>
+                </li>
+                <li class="nav-item">
+                    <a id="btn_sexylamp" class="col-md-2 button" style="border-right: 0.1vh solid black;">섹시한램프<br><p style="font-size: small;">Sexy Lamp Test</p></a>
+                </li>
+                <li class="nav-item">
+                    <a id="btn_wir" class="col-md-2 button" style="border-right: 0.1vh solid black;">냉장고 속의 여자<br><p style="font-size: small;">Women in Refrigerators</p></a>
+                </li>
+                <li class="nav-item">
+                    <a id="btn_f-rated" class="col-md-2 button" style="border-right: 0.1vh solid black;">F등급<br><p style="font-size: small;">F-Rated</p></a>
+                </li>
+            </ul> -->
+            <div class="navbar-nav row" style="display: inline;">
+                <button type='radio' class="col-md-2 button" style="border-right: 0.1vh solid black;" value="01bechdel">
+                    벡델테스트<br>
+                    <p style="font-size: small;">Bechdel Test</p>
+                </button>
+                <button id="btn_makomori" value="02makomori" type='radio' class="col-md-2 button" style="border-right: 0.1vh solid black;"> 
+                        마코모리<br><p style="font-size: small;">Mako Mori Test</p>
+                </button>
+                <button type='radio' id="btn_sexylamp" value="03sexylamp" class="col-md-2 button" style="border-right: 0.1vh solid black;">
+
+                    섹시한램프<br>
+                    <p style="font-size: small;">Sexy Lamp Test</p>
+                </button>
+                <button type='radio' id="btn_wir" value="04wominrf" class="col-md-2 button" style="border-right: 0.1vh solid black;">
+                냉장고 속의 여자<br>
+                    <p style="font-size: small;">Women in Refrigerators</p>
+                </button>
+                <button class="col-md-2 button" style="border-right: 0.1vh solid black;">
+                    <input type='radio' id="btn_f-rated" value="05frated">F등급<br>
+                    <p style="font-size: small;">F-Rated</p>
+                </button>
             </div>
+
             <div>
                 <div class="row" style="display: inline;">
                     <div class="col-md-10" style="display: inline-block; height: 0.1vh; background-color: black;"></div>
                 </div>
             </div>
             <div class="col-sm-10" style="display: inline-block; -ms-flex: 0 0 86%; flex: 0 0 86%; max-width: 86%;">
-                <div class="row">
-                    <div class=" col-md-6 " style="padding: 0; display: inline-block; ">
-                        <img class="img-fluid " src="img/sect03_rate_model/test01.png ">
+                <div id="01bechdel" class="row">
+                    <div class="col-md-6" style="padding: 0; display: inline-block; ">
+                        <img class="img-fluid" src="img/sect03_rate_model/makomori.png ">
                     </div>
                     <div class="col-md-6 text-left" style="padding: 1.5vw; display: inline-block; ">
                         <strong>마코모리 Mako Mori Test</strong><br>
@@ -226,12 +242,64 @@
                         <br>- 그 이야기가 남성 인물의 이야기를 보조하는데 그치진 않는가?</small>
                     </div>
                 </div>
+                <!-- <div id="02makomori" class="row">
+                    <div class=" col-md-6 " style="padding: 0; display: inline-block; ">
+                        <img class="img-fluid " src="img/sect03_rate_model/makomori.png ">
+                    </div>
+                    <div class="col-md-6 text-left " style="padding: 1.5vw; display: inline-block; ">
+                        <strong>마코모리 Mako Mori Test</strong><br>
+                        <small>마코 모리 테스트(Mako Mori Test)는 벡델테스트를 보완하기 위해 만들어진 미디어 테스트입니다. 영화 [퍼시픽 림]의 등장인물 마코 모리의 이름에서 유래했으며, 벡델 테스트처럼 세 가지 지문이 주어지며 모두 충족시켜야 통과할 수 있습니다.<br>
+                        영화에 여성이 얼마나 등장하는지보다 여성이 중심 인물로서 얼마나 비중있고 정형성에서 벗어나 있는지를 따지는 테스트입니다.
+                        <br>- 최소 한 명의 여성이 등장하는가? 
+                        <br>- 그 여성이 자신의 이야기를 가지고 있는가? 
+                        <br>- 그 이야기가 남성 인물의 이야기를 보조하는데 그치진 않는가?</small>
+                    </div>
+                </div>
+                <div id="03sexylamp " class="row">
+                    <div class=" col-md-6 " style="padding: 0; display: inline-block; ">
+                        <img class="img-fluid " src="img/sect03_rate_model/makomori.png ">
+                    </div>
+                    <div class="col-md-6 text-left " style="padding: 1.5vw; display: inline-block; ">
+                        <strong>마코모리 Mako Mori Test</strong><br>
+                        <small>마코 모리 테스트(Mako Mori Test)는 벡델테스트를 보완하기 위해 만들어진 미디어 테스트입니다. 영화 [퍼시픽 림]의 등장인물 마코 모리의 이름에서 유래했으며, 벡델 테스트처럼 세 가지 지문이 주어지며 모두 충족시켜야 통과할 수 있습니다.<br>
+                        영화에 여성이 얼마나 등장하는지보다 여성이 중심 인물로서 얼마나 비중있고 정형성에서 벗어나 있는지를 따지는 테스트입니다.
+                        <br>- 최소 한 명의 여성이 등장하는가? 
+                        <br>- 그 여성이 자신의 이야기를 가지고 있는가? 
+                        <br>- 그 이야기가 남성 인물의 이야기를 보조하는데 그치진 않는가?</small>
+                    </div>
+                </div>
+                <div id="04wominrf " class="row ">
+                    <div class=" col-md-6 " style="padding: 0; display: inline-block; ">
+                        <img class="img-fluid " src="img/sect03_rate_model/makomori.png ">
+                    </div>
+                    <div class="col-md-6 text-left " style="padding: 1.5vw; display: inline-block; ">
+                        <strong>마코모리 Mako Mori Test</strong><br>
+                        <small>마코 모리 테스트(Mako Mori Test)는 벡델테스트를 보완하기 위해 만들어진 미디어 테스트입니다. 영화 [퍼시픽 림]의 등장인물 마코 모리의 이름에서 유래했으며, 벡델 테스트처럼 세 가지 지문이 주어지며 모두 충족시켜야 통과할 수 있습니다.<br>
+                        영화에 여성이 얼마나 등장하는지보다 여성이 중심 인물로서 얼마나 비중있고 정형성에서 벗어나 있는지를 따지는 테스트입니다.
+                        <br>- 최소 한 명의 여성이 등장하는가? 
+                        <br>- 그 여성이 자신의 이야기를 가지고 있는가? 
+                        <br>- 그 이야기가 남성 인물의 이야기를 보조하는데 그치진 않는가?</small>
+                    </div>
+                </div>
+                <div id="05frated " class="row ">
+                    <div class=" col-md-6 " style="padding: 0; display: inline-block; ">
+                        <img class="img-fluid " src="img/sect03_rate_model/makomori.png ">
+                    </div>
+                    <div class="col-md-6 text-left " style="padding: 1.5vw; display: inline-block; ">
+                        <strong>마코모리 Mako Mori Test</strong><br>
+                        <small>마코 모리 테스트(Mako Mori Test)는 벡델테스트를 보완하기 위해 만들어진 미디어 테스트입니다. 영화 [퍼시픽 림]의 등장인물 마코 모리의 이름에서 유래했으며, 벡델 테스트처럼 세 가지 지문이 주어지며 모두 충족시켜야 통과할 수 있습니다.<br>
+                        영화에 여성이 얼마나 등장하는지보다 여성이 중심 인물로서 얼마나 비중있고 정형성에서 벗어나 있는지를 따지는 테스트입니다.
+                        <br>- 최소 한 명의 여성이 등장하는가? 
+                        <br>- 그 여성이 자신의 이야기를 가지고 있는가? 
+                        <br>- 그 이야기가 남성 인물의 이야기를 보조하는데 그치진 않는가?</small>
+                    </div>
+                </div> -->
             </div>
         </div>
 
         <!-- f-rated 설명 -->
-        <div class="page bgi">
-            <div class="container">
+        <div class="page bgi ">
+            <div class="container ">
                 <img src="img/chapter02/f_rated_logo.png " style="width:30%; ">
                 <div class="container " style="width:60vw; margin-top:0 ">
                     <img src="img/fffooo.gif " style="width:100%; margin-bottom: 5%; ">
@@ -445,7 +513,6 @@
         </footer>
     </section>
 
-
     <!-- Chart JavaScript Libraries-->
     <script src="https://www.gstatic.com/charts/loader.js "></script>
     <script src="js/chart.js "></script>
@@ -464,6 +531,27 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js "></script>
+
+    <script>
+        $(document).ready(function() {
+            $("input").click(function() {
+
+                alert($(this).attr('value'))
+                var id = $(this).attr('value');
+                $('#' + id).show();
+
+            });
+
+        });
+    </script>
+    <script>
+        $(".button").on('click', function() {
+            // var ab = $(".button.active")
+            $(this).toggleClass('active');
+            // var id = $(this).val
+        })(jQuery);
+    </script>
+
 </body>
 
 </html>
