@@ -8,32 +8,6 @@ li {
     list-style: none;
 }
 
-
-/* input 기본 스타일 초기화 */
-
-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-
-/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
-
-input::-ms-clear {
-    display: none;
-}
-
-
-/* input type number 에서 화살표 제거 */
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
 h1,
 h2,
 h3,
@@ -413,6 +387,22 @@ h3 .text1_2 {
 
 
 /* 반응형 */
+
+#mobile {
+    width: 100vw;
+    height: 100vh;
+    background-color: #efefef;
+    display: none;
+}
+
+@media (max-width: 767px) {
+    #page-top {
+        display: none;
+    }
+    #mobile {
+        display: block;
+    }
+}
 
 @media (min-width: 577px) {
     .counter-box {
