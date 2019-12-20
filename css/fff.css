@@ -115,7 +115,7 @@ a:hover {
     min-width: 250px;
     min-height: 80px;
     position: absolute;
-    font-family: NotoSansCJKkr;
+    font-family: NotoSansCJKkr, Helvetica, sans-serif;
     font-size: 1.5vw;
     font-weight: 500;
     font-stretch: normal;
@@ -229,10 +229,10 @@ a:hover {
 
 .text1 {
     display: block;
-    margin: 4vh auto 4vh 0;
+    margin: 3vh auto 3vh 0;
     width: 100%;
-    font-family: NotoSansCJKkr;
-    font-size: 1.7rem;
+    font-family: NotoSansCJKkr, Helvetica, sans-serif;
+    font-size: 1.5rem;
     line-height: 1.50;
     text-align: center;
     color: #000000;
@@ -242,7 +242,7 @@ a:hover {
     display: block;
     margin: 2vh auto 2vh 0;
     width: 100%;
-    font-family: NotoSansCJKkr;
+    font-family: NotoSansCJKkr Helvetica, sans-serif;
     font-size: 1.3rem;
     line-height: 1.5;
     text-align: center;
@@ -255,7 +255,7 @@ a:hover {
 
 .text1_3 {
     display: block;
-    font-family: NotoSansCJKkr;
+    font-family: NotoSansCJKkr, Helvetica, sans-serif;
     font-size: 1.1rem;
     line-height: 1.5;
     text-align: center;
@@ -296,7 +296,7 @@ h3 .text1_2 {
     display: block;
     margin: 4vh auto 4vh 0;
     width: 100%;
-    font-family: NotoSansCJKkr;
+    font-family: NotoSansCJKkr, Helvetica, sans-serif;
     font-size: 1.7rem;
     font-weight: bold;
     line-height: 1.50;
@@ -308,7 +308,7 @@ h3 .text1_2 {
     display: block;
     /* margin: 8vh auto 8vh 0;
     width: 465px; */
-    font-family: NotoSansCJKkr;
+    font-family: NotoSansCJKkr, Helvetica, sans-serif;
     font-size: 1.1em;
     font-weight: medium;
     line-height: 1.50;
@@ -319,7 +319,7 @@ h3 .text1_2 {
 .text-annotation {
     display: inline-block;
     width: 80%;
-    font-family: NotoSansCJKkr;
+    font-family: NotoSansCJKkr, Helvetica, sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 1.50;
@@ -362,7 +362,7 @@ h3 .text1_2 {
 }
 
 .person-name {
-    font-family: NotoSansCJKkr;
+    font-family: NotoSansCJKkr, Helvetica, sans-serif;
     font-size: 1.8vw;
     font-weight: bold;
     font-stretch: normal;
@@ -373,7 +373,7 @@ h3 .text1_2 {
 }
 
 .person-name-2 {
-    font-family: NotoSansCJKkr;
+    font-family: NotoSansCJKkr, Helvetica, sans-serif;
     font-size: 1.2vw;
     font-weight: bold;
     font-stretch: normal;
