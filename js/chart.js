@@ -281,7 +281,7 @@ function drawChart1({ id, title, men, wom }) {
 
         slices: {
             0: { color: mainBlue },
-            1: { color: mainGray },
+            1: { color: dimGray },
         },
 
         pieStartAngle: 0,
@@ -438,7 +438,6 @@ function drawChart3({ id, title }) {
     ]);
 
     const options = {
-        title,
         pieHole: 0.5,
         pieStartAngle: 0,
         legend: 'none',
@@ -447,7 +446,10 @@ function drawChart3({ id, title }) {
         // fontSize: 12,
         slices: {
             0: { color: mainBlue },
-            1: { color: mainGray },
+            1: { color: dimGray },
+        },
+        backgroundColor: {
+            fill: 'none'
         }
     };
 
