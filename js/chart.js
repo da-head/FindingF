@@ -62,18 +62,20 @@ async function onReady() {
         wom: 226,
     });
 
-    drawChart1({
+    director_gender({
         id: 'man-director',
         title: '남성 감독의 여성 작가,배우 기용률',
-        men: 900,
-        wom: 300,
+        zero: 342,
+        one: 204,
+        two: 26,
     });
 
-    drawChart1({
+    director_gender({
         id: 'wom-director',
         title: '여성 감독의 여성 작가,배우 기용률',
-        men: 100,
-        wom: 900,
+        zero: 4,
+        one: 37,
+        two: 49,
     });
 
     //한국 영화산업, F-등급으로 다시보기
@@ -297,6 +299,7 @@ function drawChart1({ id, title, men, wom }) {
     chart.draw(data, options);
 };
 
+
 function createCustomHTMLContent(gender, quantity, percentage) {
     if (gender == '여성') {
         return '<div style="padding: 10px 12px; text-align: left;">' +
@@ -311,7 +314,76 @@ function createCustomHTMLContent(gender, quantity, percentage) {
         '<div><h6>`' + percentage + '%`</h6></div>' +
         '</div>';
 
-}
+};
+
+
+function director_gender({ id, title, zero, one, two }) {
+
+    const total = zero + one + two;
+
+    const zeroPercent = Math.round(100 * zero / total * 10) / 10;
+    const onePercent = Math.round(100 * one / total * 10) / 10;
+    const twoPercent = Math.round(100 * two / total * 10) / 10;
+
+    const data = google.visualization.arrayToDataTable([
+        ['Element', 'Value', { type: 'string', role: 'tooltip', 'p': { 'html': true } }, { role: 'style' }],
+        ['0명', zero, createCustomHTMLContent2('0명', `${zero}`, `${zeroPercent}`), 'color:' + dimGray],
+        ['1명', one, createCustomHTMLContent2('1명', `${one}`, `${onePercent}`), 'color:' + subBlue],
+        ['2명', two, createCustomHTMLContent2('2명', `${two}`, `${twoPercent}`), 'color:' + mainBlue],
+    ]);
+
+    const options = {
+        // fontName: 'CourierNewPSMT',
+        // colors: ['#979797', '#0060ff', '#0060ff'],
+        legend: { position: "none" },
+        pieHole: 0.6,
+
+        slices: {
+            0: { color: dimGray },
+            1: { color: subBlue },
+            2: { color: mainBlue },
+        },
+
+        pieStartAngle: 0,
+        focusTarget: 'category',
+        tooltip: { isHtml: true },
+        backgroundColor: {
+            fill: 'none',
+        },
+    };
+
+    const element = document.getElementById(id);
+    const chart = new google.visualization.PieChart(element);
+    chart.draw(data, options);
+};
+
+
+
+
+function createCustomHTMLContent2(count, quantity, percentage) {
+    if (count == '0명') {
+        return '<div style="padding: 10px 12px; text-align: left;">' +
+            '<div><h6 style="color :' + dimGray + ';"><strong>' + count + '</strong><h6></div><hr>' +
+            '<div><h6>' + quantity + '명 </h6></div>' +
+            '<div><h6>' + percentage + '%</h6></div>' +
+            '</div>';
+    };
+
+    if (count == '1명') {
+        return '<div style="padding: 10px 12px; text-align: left;">' +
+            '<div><h6 style="color :' + dimBlue + ';"><strong>' + count + '</strong><h6></div><hr>' +
+            '<div><h6>' + quantity + '건 </h6></div>' +
+            '<div><h6>' + percentage + '%</h6></div>' +
+            '</div>';
+    };
+
+    return '<div style="padding: 10px 12px; text-align: left;">' +
+        '<div><h6 style="color :' + mainBlue + ';"><strong>' + count + '</strong><h6></div><hr>' +
+        '<div><h6>' + quantity + '건 </h6></div>' +
+        '<div><h6>' + percentage + '%</h6></div>' +
+        '</div>';
+
+};
 
 /*-------------------
 03. #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트
