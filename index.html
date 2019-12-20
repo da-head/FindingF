@@ -339,8 +339,8 @@
             </div>
     </div>
     <!-- f-rated 설명 -->
-    <div class="page bgg ">
-        <div class="container ">
+    <div class="fitpage">
+        <div class="container">
             <img src="img/chapter02/f_rated_logo.png " style="width:30%; ">
             <div class="container " style="width:60vw; margin-top:0 ">
                 <img src="img/fffooo.gif " style="width:100%; margin-bottom: 5%; ">
@@ -365,7 +365,7 @@
         </div>
     </div>
     </section>
-
+    <hr>
     <!--  Section04 사용한 데이터에 관하여 -->
     <section class="container fitpage">
         <div class=" row ">
@@ -429,29 +429,30 @@
             <p class="text1 ">한국 영화 산업,<br><strong>F등급</strong>으로 다시 보기</p>
 
             <!-- 관람객 F등급 분포-->
-            <div style="display: inline-block; width: 70%; height: 50vw; margin:-9% 0 -9% 0">
-                <div id="user-distribution" style="display: inline-block; position: relative; width: 130%; height: 130%; margin:0 0 -15% 0"></div>
-                <input type="button" id="change" class="button-rouded treg"></button>
+            <div style="display: inline-block; width: 70%; height: 50vw; margin:-9% 0 -9% 0;">
+                <div id="user-distribution" style="display: inline-block; position: relative; width: 130%; height: 130%; margin:0 0 -15% 0; position: relative;"></div>
+                <input type="button" id="change" class="button-rouded treg" style="position:relative; z-index: 3;"></button>
             </div>
             <p class="text1_2 ">관람객의 70%가 F0등급<small>(주요 포지션에 여성이 한 명도 없는)</small>영화를 보고 있습니다.<br>이러한 결과는 다른 곳에 영향을 안끼쳤을까요?</p>
         </div>
         <hr>
 
         <!-- 장르별 -->
-        <div class="text1_2 ">
-            <p>장르별 영화 데이터 살펴보기</p>
+        <div class="page bgw">
+            <p class="text1">장르별 영화 데이터 살펴보기</p>
+
             <p>장르별 영화 수/관객 수 비교</p>
             <p>액션, 사극, 범죄의 경우 영화 수에 비해 관객이 많다.</p>
         </div>
         <hr>
-        <div class="gen2 container ">
+        <div class="page">
             <p class="text1 ">장르별 F등급 비율</p>
         </div>
 
         <hr>
-        <div style="padding: 100px; ">
+        <div style="padding: 100px;">
             <div class="dstr container " style="position: relative; z-index:3; ">
-                <p class="text1 ">여성 영화가 제작되고 있는 만큼<br>충분히 상영되고 있을까요?</p>
+                <p class="text1 ">힘들게 제작 된 여성영화<br>충분히 상영되고 있을까요?</p>
             </div>
             <!-- #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트 시작-->
 
@@ -472,9 +473,13 @@
                 </div>
             </div>
             <!-- #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트 끝-->
-            <p class="text1_2 ">제작단계에 비해 배급단계부터 여성영화 비중이 확연히 줄어든다.
-                <br><span style="color: #0060ff; font-weight: 600; ">→ F0 등급은 15% 증가하고, F0 등급은 1/7 수준으로 감소</span>
-            </p>
+            <div class="text1_2" style="margin-top:-5%;">
+                <p class="text-annotation text-center">제작 단계: 개봉 수 기준 / 배급 단계: 상영횟수 기준 / 관람 단계: 관객수 기준</p>
+                <div class="text1_2 ">제작단계에 비해 배급단계부터 여성영화 비중이 확연히 줄어듭니다.<br> 어디서 부터 문제인 것 일까요? 우리가 원하는 영화를 못 보는 이유는 배급의 문제가 있지 않을까요? <br>
+                    <br>
+                    <div style="color: #0060ff; font-weight: 600; ">→ F0 등급은 15% 증가하고, F0 등급은 1/7 수준으로 감소</div>
+                </div>
+            </div>
         </div>
     </section>
     <hr>
@@ -482,22 +487,36 @@
     <!-- Section 06 EDA 결론 -->
 
     <section id="EDA_conclusion ">
-        <div class="dstr2 container ">
+        <div class="fitpage">
             <p class="text1 ">우리는 영화관에서<br> 보고싶은 영화를 볼 수 있나요?</p>
 
-            <div class="container ">
+            <!-- <div class="container">
                 <div id="top10-distributor">
-                    <div id="top10-donut" style="display: inline-block; width: 60w; height: 60vw; margin: 0; "></div>
+                    <div id="top10-donut" style="display: inline-block; width: 60%; height: 60vw; margin: -10%; "></div>
                 </div>
             </div>
-            <p class="text1_2 ">이 10개의 배급사가 한국영화 상영 전체 횟수의 87%를 차지하고 있는 와중에<br> 이들이 남성영화의 배급을 훨씬 많이 하고 있으니<br> 여성영화들은 대중에게 선보일 기회를 적게 갖게 되고, <br> 흥행으로 이어지지 못하는 것은 당연한 결과입니다.</p>
-        </div>
+            <p class="text1_2 ">이 10개의 배급사가 한국영화 상영 전체 횟수의 87%를 차지하고 있는 와중에<br> 이들이 남성영화의 배급을 훨씬 많이 하고 있으니<br> 여성영화들은 대중에게 선보일 기회를 적게 갖게 되었습니다. <br></p>
+        </div> -->
     </section>
 
 
     <!-- Section 07 OLS -->
-    <div class="container ">
+
+    <hr>
+    <div class="page bgw">
+        <p class="text1 ">영화 규모별 그룹핑</p>
+
+        <p class="text1_2 ">- 배정 좌석수를 기준으로 소/중/대 그룹을 나눠 분석을 진행했습니다.
+            <br>그 중 극한직업의 배정 좌석수(49,962,395 좌석)는 다른 영화들과 비교했을 때, 너무 많았기 때문에 제외하고 진행했습니다.
+            <br>- 영화 규모별로 살펴 볼 때, 소규모 영화의 갯수와 여성 영화의 갯수가 가장 많았습니다. 하지만 소규모에서 대규모로 점점 지나갈 수록 여성영화의 갯수가 줄어드는 것을 알 수 있습니다.
+        </p>
+        <p class="text-annotation text-center">[회귀분석] X: 총배정좌석수 y: 전국관객수: 배정된 좌석수의 33% 정도의 좌석이 찬다. 전체배정좌석수가 전국관객수의 91%를 설명. <br> - **X: 총 배정 좌석 수 y: 전국 매출액:** 좌석수와 매출액이 양의 상관관계.
+        </p>
+    </div>
+    <hr>
+    <div class="page bgw">
         <p class="text1 ">각 영화 규모 등급 내에서<br> 여성영화의 흥행성적이 더 좋다.</p>
+
         <p class="text1_2 ">한국 영화들은 제작비가 공개가 되지 않기 때문에 다른 지표를 기준으로 영화 규모를 잡고 분석을 할 필요가 있었다.<br> 단순 상영 횟수 뿐만 아니라, 어떤 시간대에 얼마나 큰 상영관에서 상영되는지가 관객수와 매출액을 결정하는데 큰 영향을 미친다.<br> 그래서 가장 사람들이 영화관을 많이 찾는 프라임 시간대(16시-22시)에, <br> 배정된 총 좌석의 수(상영관 좌석수 * 상영 횟 수)의 합계를 기준으로 영화 규모의 기준을 잡았다.
             <br> N개로 등급을 나누어 등급 별 상관관계를 알아보기로 했다.<br> (영화 규모 등급 기준 : 상영 시간(16-22)에 배정된 좌석 수)
         </p>
