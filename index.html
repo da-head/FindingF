@@ -90,12 +90,13 @@
                     <img src="img/intro/감독.png" style="width:50%; margin :auto; padding: 0 auto">
                 </div>
             </div>
-            <div class="intro1 fitpage bgg">
+            <div class="longpage bgg">
                 <p class="text1 tbold title-a">필모그래피 비교</p>
                 <div style="display: flex;">
                     <img src="img/intro/감독필모.png" style="width: 60%; margin: auto;">
                 </div>
             </div>
+            <div class="clear"></div>
             <!-- 제작비 비교 -->
             <div class="container page" style="background-color: white;">
                 <p class="text1 tbold title-a">제작비 비교</p>
@@ -118,7 +119,7 @@
                 </div>
             </div>
 
-            <div class="fullpage bgg" style="height: 100%;">
+            <div class="longpage bgg" style="height: 100%;">
                 <p class="text1 tbold">필모그래피 비교</p>
                 <div>
                     <p class="text-annotation text-center">
@@ -143,8 +144,6 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
 
         <!--  Section02 EDA-->
@@ -183,11 +182,11 @@
                 <div class="container fitpage">
                     <div id="srate_chart" style="width: 80%; margin: -10% auto 0">
                         <div style="float:left; width: 50%; height: 40vw; ">
-                            <h6 style="display: inline-block; position: relative; z-index:2; top: 25vw; left: 2.8vw "><strong>남성 감독의 <br>여성 작가,배우 기용률</strong></h6>
+                            <h6 style="display: inline-block; position: relative; z-index:2; top: 26vw; left: 3.5vw "><strong>남성 감독의 <br>여성 작가,배우 기용률</strong></h6>
                             <div id="man-director" style="display: inline-block; position: relative; width: 120%; height: 120%; "></div>
                         </div>
                         <div style="float:right; width: 50%; height: 40vw; ">
-                            <h6 style="display: inline-block; position: relative; z-index:2; top: 25vw; left: 2.8vw "><strong>여성 감독의 <br>여성 작가,배우 기용률</strong></h6>
+                            <h6 style="display: inline-block; position: relative; z-index:2; top: 26vw; left: 3.5vw "><strong>여성 감독의 <br>여성 작가,배우 기용률</strong></h6>
                             <div id="wom-director" style="display: inline-block; position: relative; width: 120%; height: 120%; "></div>
                         </div>
                         <div class="clear"></div>
@@ -223,9 +222,9 @@
                         <div id="circle_wom">
                             <p style="margin: 0; padding:0; color: white;">여자<strong> 1</strong></p>
                         </div>
-                        <div style="width: 3vw; display: inline-block; height: 0.11vh; background-color: black; margin: 0 -1vw 0 1vw;">
+                        <div style="width: 2%; display: inline-block; height: 0.11vh; background-color: black; margin: 0 -1vw 0 1vw;">
                         </div>
-                        <div style="width: 10vw; display: inline-block; vertical-align: middle;">
+                        <div style="width: 10%; display: inline-block; vertical-align: middle;">
                             <strong style="color: black;">[말모이]</strong><br>엄유나 감독
                         </div>
                     </div>
@@ -496,19 +495,19 @@
     <hr>
 
     <!-- Section 06 EDA 결론 -->
-
+    <!-- 
     <section id="EDA_conclusion ">
         <div class="fitpage">
             <p class="text1 ">우리는 영화관에서<br> 보고싶은 영화를 볼 수 있나요?</p>
 
-            <!-- <div class="container">
+            <div class="container">
                 <div id="top10-distributor">
                     <div id="top10-donut" style="display: inline-block; width: 60%; height: 60vw; margin: -10%; "></div>
                 </div>
             </div>
             <p class="text1_2 ">이 10개의 배급사가 한국영화 상영 전체 횟수의 87%를 차지하고 있는 와중에<br> 이들이 남성영화의 배급을 훨씬 많이 하고 있으니<br> 여성영화들은 대중에게 선보일 기회를 적게 갖게 되었습니다. <br></p>
-        </div> -->
-    </section>
+        </div>
+    </section> -->
 
 
     <!-- Section 07 OLS -->
@@ -551,9 +550,10 @@
                 </div>
             </div>
         </div>
-        <div class="text1 tbold">
+        <div style="height: 5vh;"></div>
+        <!-- <div class="text1_3 tbold">
             영화 규모별 F등급 비율
-        </div>
+        </div> -->
         <div class="row" style="display: inline-block;">
             <div class="col-md-3" style="display: inline-block; margin: 0 -3vw 0 0;">
                 <img class=" img-fluid " src="img/ols_re/g01_small.png">
@@ -572,8 +572,9 @@
     <hr>
 
 
-    <div class="page bgw ">
-        <p class="text1 ">각 영화 규모 등급 내에서<br><strong>여성영화(F-123)</strong>의 흥행성적이 더 좋게 나왔습니다</p>
+
+    <div class="page">
+        <p class="text1 ">대규모와 소규모 등급에서<br><strong>여성영화(F-123)</strong>의 흥행성적이 더 좋게 나왔습니다</p>
         <div>
             <img class="img-fluid" src="img/ols_re/g_ols_groups.svg"></img>
         </div>
@@ -582,7 +583,7 @@
         </div>
         <div style="height: 5vh;"></div>
         <div class="text1_3">
-            - 소규모 영화와 대규모 영화에서 F등급이 높을수록 좌석판매율이 높아집니다.
+            662편 영화를 ols 회귀분석 모델로 분석했을 때, 소규모와 대규모 영화에서 <strong>F등급이 높을수록 좌석판매율이 높아진다는</strong> 결과가 나왔습니다.
             <br> - 대규모의 영화의 경우, 동일한 영화가 <strong>F등급이 1이 오르면</strong> 좌석판매율이 2.354%p 만큼 오르는 것을 알 수 있습니다.
             <br> - F0등급 영화가 F3등급이 된다면, 좌석 판매율이 2.354%p 상승 한 만큼 <strong>총 배정좌석수와 전국관객수, 전국 매출액</strong>도 상승할 것입니다.
         </div>
@@ -594,35 +595,73 @@
         </p> -->
         <!-- <p class="text-annotation text-center wom-color ">[회귀분석] X: 총배정좌석수 y: 전국관객수: 배정된 좌석수의 33% 정도의 좌석이 찬다. 전체배정좌석수가 전국관객수의 91%를 설명. <br> - **X: 총 배정 좌석 수 y: 전국 매출액:** 좌석수와 매출액이 양의 상관관계.
         </p> -->
-    </div>>
-
-    <hr>
-    <!-- Section 08 ending -->
-    <div class="section-counter paralax-mf bg-image " style="background-image: url(img/dummy/5.jpg) ">
-        <div class="overlay-mf "></div>
-        <div class="container">
-            <div class="row ">
-                <div class="text1 " style="color:white; z-index: 2; ">
-                    <p>한국을 대표하는 자랑스러운 문화컨텐츠, 영화.<br> 그런데 왜 여자들의 이야기는 그만큼 보이지 않는 걸까요?</p>
-                </div>
-            </div>
-        </div>
     </div>
+    <div class="page bgw">
 
-    <section style="padding-top: 100px; ">
-        <div class="container bgw ">
-            <div style="height: 5vh; "></div>
+        <p class="text1 tbold">
+            <span class="man-color">F-0등급</span> 영화가
+            <span class="wom-color">F-3등급</span>이 된다면?</p>
+        <p class="text1_3">대규모 영화 그룹군에 속하는 <strong>내부자들</strong>의 흥행성적</p>
+        <div style="height: 5vh;"></div>
+        <div class="col-sm-10" style="display: inline-block; -ms-flex: 0 0 86%; flex: 0 0 86%; max-width: 86%;">
+            <div class="row">
 
-            <div style="padding-bottom: 100px; ">
-                <div class="closing2 container ">
-                    <p class="text1 "> 사회는 빠른 속도로 변하고 있습니다. <br>그러나, 우리는 변화한 사회 양상에도<br> 여전히 많은 곳에서 여성이 주요 자리에서 지워지고 있는 것을 보고 있습니다.
-                    </p>
+                <div class="col-md-6" style="padding: 0; display: inline-block; ">
+                    <img class="img-fluid" src="img/newcasting/내부자들.jpg"></img>
+                </div>
+
+                <div class="text1 col-md-6" style="padding: 0; display: inline-block; ">
+                    좌석판매율
+                    <br>
+                    <span id="f0-sell" class="text1 man-color tbold" style="margin:0.5vh 0">28.43%</span>
+                    <span id="f3-sell" class="text1 man-color tbold" style="margin:0.5vh 0; display: none;">36.18%</span>
+                    <br>
+                    <br>전국관객수
+                    <br>
+                    <span id="f0-watch" class="text1 man-color tbold" style="margin:0.5vh 0">7,071,763명</span>
+                    <span id="f3-watch" class="text1 man-color tbold" style="margin:0.5vh 0; display: none;">7,071,763명</span>
+
+                    <br>
+                    <br>전국매출액
+                    <br>
+                    <span id="f0-nat" class="text1 man-color tbold" style="margin:0.5vh 0">56,596,582,057원</span>
+                    <span id="f3-nat" class="text1 man-color tbold" style="margin:0.5vh 0; display: none;">56,596,582,057원</span>
+                </div>
+            </div>
+            <div id="event">
+
+            </div>
+        </div>
+
+
+
+        <hr>
+        <!-- Section 08 ending -->
+        <div class="section-counter paralax-mf bg-image " style="background-image: url(img/dummy/5.jpg) ">
+            <div class="overlay-mf "></div>
+            <div class="container">
+                <div class="row ">
+                    <div class="text1 " style="color:white; z-index: 2; ">
+                        <p>한국을 대표하는 자랑스러운 문화컨텐츠, 영화.<br> 그런데 왜 여자들의 이야기는 그만큼 보이지 않는 걸까요?</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- <div class="closing3 container ">
+        <section style="padding-top: 100px; ">
+            <div class="container bgw ">
+                <div style="height: 5vh; "></div>
+
+                <div style="padding-bottom: 100px; ">
+                    <div class="closing2 container ">
+                        <p class="text1 "> 사회는 빠른 속도로 변하고 있습니다. <br>그러나, 우리는 변화한 사회 양상에도<br> 여전히 많은 곳에서 여성이 주요 자리에서 지워지고 있는 것을 보고 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="closing3 container ">
             <p>2000년, 미국 CBS에서 방영된 &lt;CSI 과학수사대&gt;를 보고 <br>남자의 영역이라고 생각했던 법의학에 뛰어든 여성들과 같이, <br> 여성이 의미있는 행동을 보이는 영화는 아이들을 바꾸고 사회를 바꿉니다. <br> ‘F를 찾아서’는 변화하는 거대한 흐름에 동참하고자 합니다.</p>
         </div>
         <div class="closing3 container ">
@@ -631,97 +670,122 @@
         </div> -->
 
 
-    <!-- 팀소개 -->
-    <section>
-        <div style="background-color: #0060ff; ">
-            <div class="container fitpage ">
-                <h1 style="color: white; ">
-                    da.head()
-                </h1>
-                <h5 style="color: white; margin-top: 5%; line-height: 1.5; ">
-                    영화를 좋아하는 데이터 분석가들이 모인 그룹
-                    <br> 한국영화의 F등급 점수와 흥행성적과의 상관관계를 분석하는 프로젝트 ‘F를 찾아서(Finding F)’를 진행했습니다.
-                </h5>
-                <h6>
-                    <strog>사용한 도구</strog>
-                </h6>
-                <h7>
-                    크롤링과 OPEN API 로 데이터를 수집하고, 데이터 분석에는 파이썬 기반의 분석 패키지인 pandas, Excel 을 사용하고, 시각화에는 matplotlib, seaborn, plotly 등을 사용했습니다. 커뮤니케이션에는 GitHub, Slack, Notion, Google Apps 를 사용했습니다.
-                </h7>
+        <!-- 팀소개 -->
+        <section>
+            <div style="background-color: #0060ff; ">
+                <div class="container fitpage ">
+                    <h1 style="color: white; ">
+                        da.head()
+                    </h1>
+                    <h5 style="color: white; margin-top: 5%; line-height: 1.5; ">
+                        영화를 좋아하는 데이터 분석가들이 모인 그룹
+                        <br> 한국영화의 F등급 점수와 흥행성적과의 상관관계를 분석하는 프로젝트 ‘F를 찾아서(Finding F)’를 진행했습니다.
+                    </h5>
+                    <h6>
+                        <strog>사용한 도구</strog>
+                    </h6>
+                    <h7>
+                        크롤링과 OPEN API 로 데이터를 수집하고, 데이터 분석에는 파이썬 기반의 분석 패키지인 pandas, Excel 을 사용하고, 시각화에는 matplotlib, seaborn, plotly 등을 사용했습니다. 커뮤니케이션에는 GitHub, Slack, Notion, Google Apps 를 사용했습니다.
+                    </h7>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- json -> html로 데이터 어떻게 불러오는지 샘플-->
-    <!-- <div id="movie "></div> -->
-    <!-- json -> html로 데이터 어떻게 불러오는지 샘플 끝-->
+        <!-- json -> html로 데이터 어떻게 불러오는지 샘플-->
+        <!-- <div id="movie "></div> -->
+        <!-- json -> html로 데이터 어떻게 불러오는지 샘플 끝-->
 
-    <!-- footer -->
-    <section id="team " class="paralax-mf footer-paralax route " style="background-color: #0033B0; ">
-        <footer>
-            <div class="container ">
-                <div class="row ">
-                    <div class="col-sm-12 ">
-                        <a id="caution ">주의사항(click)</a>
+        <!-- footer -->
+        <section id="team " class="paralax-mf footer-paralax route " style="background-color: #0033B0; ">
+            <footer>
+                <div class="container ">
+                    <div class="row ">
+                        <div class="col-sm-12 ">
+                            <a id="caution ">주의사항(click)</a>
 
-                        <p class="copyright "><br>&copy; Copyright <strong>da.head</strong>. All Rights Reserved</p>
-                        <p>채용, 오퍼 / 저작권 / 기타 문의 사항은 da.head.official@gmail.com</p>
-                        <div class="credits ">
-                            Designed by 최서령, 문민주, 왕한슬
+                            <p class="copyright "><br>&copy; Copyright <strong>da.head</strong>. All Rights Reserved</p>
+                            <p>채용, 오퍼 / 저작권 / 기타 문의 사항은 da.head.official@gmail.com</p>
+                            <div class="credits ">
+                                Designed by 최서령, 문민주, 왕한슬
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-    </section>
+            </footer>
+        </section>
 
-    <!-- Chart JavaScript Libraries-->
-    <script src="https://www.gstatic.com/charts/loader.js "></script>
-    <script src="js/chart.js "></script>
+        <!-- Chart JavaScript Libraries-->
+        <script src="https://www.gstatic.com/charts/loader.js "></script>
+        <script src="js/chart.js "></script>
 
-    <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js "></script>
-    <script src="lib/jquery/jquery-migrate.min.js "></script>
-    <script src="lib/popper/popper.min.js "></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js "></script>
-    <script src="lib/easing/easing.min.js "></script>
-    <script src="lib/counterup/jquery.waypoints.min.js "></script>
-    <script src="lib/counterup/jquery.counterup.js "></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js "></script>
-    <script src="lib/lightbox/js/lightbox.min.js "></script>
-    <script src="lib/typed/typed.min.js "></script>
+        <!-- JavaScript Libraries -->
+        <script src="lib/jquery/jquery.min.js "></script>
+        <script src="lib/jquery/jquery-migrate.min.js "></script>
+        <script src="lib/popper/popper.min.js "></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js "></script>
+        <script src="lib/easing/easing.min.js "></script>
+        <script src="lib/counterup/jquery.waypoints.min.js "></script>
+        <script src="lib/counterup/jquery.counterup.js "></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js "></script>
+        <script src="lib/lightbox/js/lightbox.min.js "></script>
+        <script src="lib/typed/typed.min.js "></script>
 
-    <!-- Template Main Javascript File -->
-    <script src="js/main.js "></script>
+        <!-- Template Main Javascript File -->
+        <script src="js/main.js "></script>
 
-    <script>
-        var img1 = document.getElementById('sect03_img');
-        var div1 = "01bechdel "
-        var cautiontext = "da.head()에 대한 관심을 넘어 온라인상에서 인격 모욕, 사생활 침해, 개인정보 유출 및 도용, 악성 루머 유퍼등을 통한 심각한 명예 훼손 등의 각종 위법행위가 벌어질 시 민형사의 법적 대응을 진행하도록 하겠습니다. ";
+        <script>
+            var img1 = document.getElementById('sect03_img');
+            var div1 = "01bechdel "
+            var cautiontext = "da.head()에 대한 관심을 넘어 온라인상에서 인격 모욕, 사생활 침해, 개인정보 유출 및 도용, 악성 루머 유퍼등을 통한 심각한 명예 훼손 등의 각종 위법행위가 벌어질 시 민형사의 법적 대응을 진행하도록 하겠습니다. ";
 
-        var activeButton = $('#btn_bechdel')
+            var activeButton = $('#btn_bechdel')
 
-        $(document).ready(function() {
-            $(".button ").click(function() {
-                $('#' + div1).hide();
-                var id = $(this).attr('value');
-                img1.src = "img/sect03_rate_model/" + id + ".png "
-                div1 = id;
-                $('#' + div1).show();
+            $(document).ready(function() {
+                $(".button ").click(function() {
+                    $('#' + div1).hide();
+                    var id = $(this).attr('value');
+                    img1.src = "img/sect03_rate_model/" + id + ".png "
+                    div1 = id;
+                    $('#' + div1).show();
 
-                // 버튼 활성화
-                activeButton.removeClass('active');
-                $(this).addClass('active');
-                activeButton = $(this);
+                    // 버튼 활성화
+                    activeButton.removeClass('active');
+                    $(this).addClass('active');
+                    activeButton = $(this);
+
+                });
+
+                $("#caution ").click(function() {
+                    alert(cautiontext)
+                });
+
+                $()
 
             });
+        </script>
+        <script>
+            var isVisible = false;
 
-            $("#caution ").click(function() {
-                alert(cautiontext)
+            $(window).on('scroll', function() {
+                if (checkVisible($('#event')) && !isVisible) {
+
+                    // alert("Visible!!!");
+
+                    isVisible = true;
+                }
             });
 
-        });
-    </script>
+            function checkVisible(elm, eval) {
+                eval = eval || "object visible";
+                var viewportHeight = $(window).height(), // Viewport Height
+                    // scrolltop = $(window).scrollTop(), // Scroll Top
+                    y = $(elm).offset().top,
+                    elementHeight = $(elm).height();
+
+                if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
+                if (eval == "above") return ((y < (viewportHeight + scrolltop)));
+            }
+        </script>
 
     </div>
 

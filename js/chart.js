@@ -364,7 +364,7 @@ function createCustomHTMLContent2(count, quantity, percentage) {
     if (count == '0명') {
         return '<div style="padding: 10px 12px; text-align: left;">' +
             '<div><h6 style="color :' + dimGray + ';"><strong>' + count + '</strong><h6></div><hr>' +
-            '<div><h6>' + quantity + '명 </h6></div>' +
+            '<div><h6>' + quantity + '건 </h6></div>' +
             '<div><h6>' + percentage + '%</h6></div>' +
             '</div>';
     };

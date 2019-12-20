@@ -155,6 +155,12 @@ a:hover {
     text-align: center;
 }
 
+.longpage {
+    height: 120vh;
+    padding: 2.5vh 2.5vw;
+    text-align: center;
+}
+
 .fullpage {
     height: 100vh;
     padding: 2.5vh 2.5vw;
@@ -193,12 +199,13 @@ a:hover {
 #circle_men {
     display: inline-block;
     background-color: #dadada;
-    width: 45vw;
-    height: 45vw;
+    width: 44vw;
+    max-width: 44vw;
+    height: 44vw;
     border-radius: 27.5vw;
     text-align: center;
     font-size: 2rem;
-    line-height: 45vw;
+    line-height: 44vw;
     margin: 0 auto;
     vertical-align: middle;
 }
