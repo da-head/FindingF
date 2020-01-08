@@ -447,9 +447,9 @@ function changingData() {
     google.visualization.events.addListener(chart, 'ready',
         function() {
             button.disabled = false;
-            button.value = (current ? '5년간 제작된 영화' : '5년 총 관람객') + ' 보기';
+            button.value = (current ? '5년 총 관람객' : '5년간 제작된 영화') + ' 보기 (click)';
         });
-    options['title'] = '단계별' + (current ? '총 제작 영화의' : '총 관람객의') + ' F등급 분포';
+    options['title'] = (current ? '총 제작 영화의' : '총 관람객의') + ' F등급 분포';
     chart.draw(data[current], options);
 };
 
