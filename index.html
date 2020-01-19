@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+
 
 <head>
 
@@ -29,7 +29,7 @@
         <img style="width: 100vw;" src="img/mobile/mobile_fff.jpeg">
     </div>
     <div id="page-top">
-        <!--/ Nav Star /-->
+        <!--/ Nav Start/-->
         <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
             <div class="container">
                 <a class="logo navbar-brand js-scroll" href="#page-top">Finding F</a>
@@ -56,8 +56,7 @@
             </div>
         </nav>
         <!--/ Nav End /-->
-        <!-- Page Start-->
-        <!-- 인트로 시작 -->
+        <!--/ Main Page Start/-->
         <div id="home" class="container intro rought bg-image">
             <div id="header" class="row" style="width: 100%">
                 <a class="Finding-Copy js-scroll" href="#page-top">Finding</a>
@@ -77,12 +76,64 @@
             </div>
             <div class="clear"></div>
         </div>
+        <!--/ Main Page End/-->
 
-        <!-- Page Start-->
-        <!-- Section 01 필모 비교 -->
+
+        <!-- Section 00.Intro-->
+        <section id="intro">
+            <div class="page paralax-mf bg-image" style="background-image: url(img/korean_film.png)">
+                <div class="overlay-mf black"></div>
+                <div class="container" style="padding:10vh">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-12">
+                            <div class="text-white">
+                                <h2>2015년 1월부터 2019년 8월까지 개봉한 한국영화</h2>
+                            </div>
+                            <div class="counter-box counter-box pt-4 pt-md-0">
+                                <div class="counter-num">
+                                    <spans style="font-size: 4rem;">662</spans>
+                                    <span class="counter-text">편 중</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding-top: 10vh;">
+                        <div class="col-sm-6 col-lg-6">
+                            <div class="counter-box pt-4 pt-md-0">
+                                <div class="text-white">
+                                    <h3>남자 감독</h3>
+                                </div>
+                                <div class="counter-num">
+                                    <span class="counter">608</span>
+                                    <span class="counter-text">명</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-lg-6">
+                            <div class="text-white">
+                                <h3>여자 감독</h3>
+                            </div>
+                            <div class="counter-box counter-box pt-4 pt-md-0">
+                                <div class="counter-num">
+                                    <spans class="counter">100</spans>
+                                    <span class="counter-text">명</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 00.Intro End-->
+
+        <!-- Section 01. 필모 비교 -->
         <section id="Korean-MovieStar-Filmograpy">
             <!-- 감독 -->
-            <div id="intro" class="page bgg">
+            <div id="directors" class="page bgg">
                 <div class="row">
                     <h1 class="text1 treg">비슷한 시기에 청룡영화상 신인감독상을 받은<br>감독들을 비교해 볼까요?</h1>
                 </div>
@@ -151,8 +202,8 @@
             <!-- <p class="text1 ">한국영화 산업의 특성</p> -->
             <div class="fitpage container">
                 <!-- 표 1 성비 -->
-                <p class="text1 treg text-left" style="z-index:3; ">
-                    한국영화 산업 속<br> 감독, 작가, 배우 성비를 비교해 볼까요?
+                <p class="text1 treg text-left" style="z-index:3;">
+                    한국영화 산업 속<br> 감독, 작가, 배우 성비를 비교해 봅시다.
                 </p>
                 <div id="srate_chart" style="width: 100%; margin: -7% auto 0;">
                     <div style="display: inline-block; position: relative; width: 30%; height:32vw;">
@@ -252,7 +303,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="text1" style="color:white; z-index: 2;">
-                            <strong>성별</strong>이 영화인의 커리어에 영향을 미치진 않을지,<br><br>영화 산업 내 <strong>젠더 불균형</strong>을 체크해 볼 수 있을까요?
+                            <strong>성별</strong>이 영화인의 커리어에 영향을 미치진 않을지,<br>영화 산업 내 <strong>젠더 불균형</strong>을 체크해 볼 수 있을까요?
                         </div>
                     </div>
                 </div>
@@ -459,10 +510,10 @@
 
             <div class="fitpage">
                 <div style="position: relative; z-index:3; ">
-                    <p class="text1 ">힘들게 제작 된 <strong>여성영화</strong><br>충분히 상영되고 있을까요?</p>
+                    <p class="text1"><strong>여성영화,</strong><br>충분히 상영되고 있을까요?</p>
                 </div>
                 <!-- #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트 시작-->
-                <div class="text-center" style="margin: -5vh 0;">
+                <div class="text-center" style="margin: -8vh 0 -5vh -5vw;">
                     <div id="frate_by_time-chart ">
                         <div style="display: inline-block; width: 32%; height: 32vw; ">
                             <h6 style="display: inline-block; position: relative; z-index:2; top: 20.7vw; left: 3vw "><strong>제작 단계</strong></h6>
@@ -484,10 +535,11 @@
             </div>
             <!-- #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트 끝-->
             <div class="text1_2 fitpage">
-                <p class="text-annotation text-center">제작 단계: 개봉 수 기준 / 배급 단계: 상영횟수 기준 / 관람 단계: 관객수 기준</p>
-                <div class="text1_2 ">제작단계에 비해 배급단계부터 여성영화 비중이 확연히 줄어듭니다.<br> 어디서 부터 문제인 것 일까요? 우리가 원하는 영화를 못 보는 이유는 배급의 문제가 있지 않을까요? <br>
+                <div class="text1_2 ">제작단계에 비해 배급단계부터 여성영화 비중이 확연히 줄어듭니다.
                     <br>
-                    <div class="text-annotation text-center" style="color: #0060ff; font-weight: 600; ">→ F0 등급은 15% 증가하고, F3 등급은 1/7 수준으로 감소</div>
+                    <br>F-0 등급의 비중은 15.8%가 증가한 반면, F-3 등급은 ¼ 수준으로 감소했습니다.
+                    <br>여성영화는 많은 관객을 만날 기회부터 얻지 못하고 있는 것일까요?
+                    <br>
                 </div>
             </div>
             <div style="height: 5vh;">
@@ -725,13 +777,15 @@
                     </h1>
                     <h5 style="color: white; margin-top: 5%; line-height: 1.5; ">
                         영화를 좋아하는 데이터 분석가들이 모인 그룹
-                        <br> 한국영화의 F등급 점수와 흥행성적과의 상관관계를 분석하는 프로젝트 ‘F를 찾아서(Finding F)’를 진행했습니다.
+                        <br>
+                        <br>
                     </h5>
-                    <h6>
-                        <strog>사용한 도구</strog>
-                    </h6>
-                    <h7>
-                        크롤링과 OPEN API 로 데이터를 수집하고, 데이터 분석에는 파이썬 기반의 분석 패키지인 pandas, Excel 을 사용하고, 시각화에는 matplotlib, seaborn, plotly 등을 사용했습니다. 커뮤니케이션에는 GitHub, Slack, Notion, Google Apps 를 사용했습니다.
+                    <strog>사용한 툴</strog>
+                    <h7 style="color: white;">
+                        <br>데이터 수집: 크롤링, OPEN API (Python)
+                        <br>데이터 분석: Pandas, Numpy, Statsmodels
+                        <br>시각화: Matplotlib, Seaborn, Plotly
+                        <br>커뮤니케이션: GitHub, Slack, Notion, G Suite
                     </h7>
                 </div>
             </div>
