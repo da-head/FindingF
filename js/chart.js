@@ -339,6 +339,14 @@ function director_gender({ id, title, zero, one, two }) {
         backgroundColor: {
             fill: 'none',
         },
+        chartArea: {
+            left: 50,
+            top: 50,
+            backgroundColor: {
+                stroke: '#efefef'
+            }
+        },
+
     };
 
     const element = document.getElementById(id);
