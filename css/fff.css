@@ -31,10 +31,15 @@ a:hover {
     clear: both;
 }
 
+.title-block {
+    margin: 4vh auto;
+}
+
 .text-block {
+    font-family: NotoSansCJKkr, Helvetica, sans-serif;
     display: inline-block;
     width: 100%;
-    margin: 5vh 0;
+    margin: 1vh 0;
     padding: 0;
 }
 
@@ -235,8 +240,16 @@ a:hover {
 
 /* 텍스트 스타일 */
 
-.treg {
+.t400 {
+    font-weight: 400;
+}
+
+.t500 {
     font-weight: 500;
+}
+
+.t600 {
+    font-weight: 600;
 }
 
 .tbold {
@@ -244,14 +257,23 @@ a:hover {
 }
 
 .text1 {
-    display: block;
-    margin: 3vh auto 3vh 0;
-    width: 100%;
-    font-family: NotoSansCJKkr, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.text_15 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+
+.text_18 {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+}
+
+.text2 {
     font-size: 2rem;
     line-height: 3rem;
-    text-align: center;
-    color: #000000;
 }
 
 .text1_2 {
@@ -261,7 +283,6 @@ a:hover {
     font-family: NotoSansCJKkr Helvetica, sans-serif;
     font-size: 1.3rem;
     line-height: 1.5;
-    text-align: center;
     color: #000000;
 }
 
@@ -306,18 +327,6 @@ h3 .text1_2 {
 
 .text1_2 .bolder {
     font-weight: 800;
-}
-
-.text2 {
-    display: block;
-    margin: 4vh auto 4vh 0;
-    width: 100%;
-    font-family: NotoSansCJKkr, Helvetica, sans-serif;
-    font-size: 1.7rem;
-    font-weight: bold;
-    line-height: 1.50;
-    text-align: center;
-    color: #000000;
 }
 
 .text-small {
