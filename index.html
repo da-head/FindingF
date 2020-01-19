@@ -67,11 +67,11 @@
 
             <div class="clear" style="height: 10%;"></div>
 
-            <img src="img/ticket.png" class="ticket mb-4">
+            <img src="img/ticket.png" id="ticket" class="ticket shadowed">
 
-            <div class="clear" style="height: 10%;"></div>
+            <div class="clear position-absolute" style="bottom: 5%;"></div>
 
-            <div class="text-block" style="position:absolute; bottom: 5%;">
+            <div class="text-block" style="position: absolute; bottom: 2%;">
                 <p class="discription">영화데이터로 분석하는<br> 영화 시장의 젠더 불균형</p>
                 <p class="discription-en">Gender Inequality in the Film Industry <br>through Data Analysis</p>
             </div>
@@ -154,23 +154,35 @@
                 <p class="text1 treg text-left" style="z-index:3; ">
                     한국영화 산업 속<br> 감독, 작가, 배우 성비를 비교해 볼까요?
                 </p>
-                <div id="srate_chart" style="width: 100%; margin: -7% auto -4%; ">
-                    <div style="display: inline-block; width: 30%; height:32vw;">
-                        <h6 style="display: inline-block; position: relative; z-index:2; top: 20.5vw; left: 2.8vw "><strong>감독 성비</strong></h6>
+                <div id="srate_chart" style="width: 100%; margin: -7% auto 0;">
+                    <div style="display: inline-block; position: relative; width: 30%; height:32vw;">
+                        <h6 style="display: inline-block; position: absolute; z-index:2; top: 19vw; left: 60%; transform: translate(-50%, 0);"><strong>감독 성비</strong></h6>
+                        <div style="position: absolute; z-index:2; top: 30vw; left: 60%; transform: translate(-50%, 0);">
+                            <small>전체: 영화 662편의 감독 708명(공동 감독 포함)</small>
+                        </div>
                         <div id="chart-director" style="display: inline-block; width: 120%; height: 120%;"></div>
                     </div>
-                    <div style="display: inline-block; width: 30%; height: 32vw; ">
-                        <h6 style="display: inline-block; position: relative; z-index:2; top: 20.5vw; left: 2.8vw "><strong>작가 성비</strong></h6>
-                        <div id="chart-writer" style="display: inline-block; position: relative; width: 120%; height: 120%; "></div>
+
+                    <div style="display: inline-block; position: relative; width: 30%; height:32vw;">
+                        <h6 style="display: inline-block; position: absolute; z-index:2; top: 19vw; left: 60%; transform: translate(-50%, 0);"><strong>메인작가 성비</strong></h6>
+                        <div style="position: absolute; z-index:2; top: 30vw; left: 60%; transform: translate(-50%, 0);">
+                            <small>전체: 작가 662명<br>* 공동작가의 경우 데이터 list의 맨 윗사람</small>
+                        </div>
+                        <div id="chart-writer" style="display: inline-block; width: 120%; height: 120%; "></div>
+
                     </div>
-                    <div style="display: inline-block; width: 30%; height: 32vw; ">
-                        <h6 style="display: inline-block; position: relative; z-index:2; top: 20.5vw; left: 2.8vw "><strong>주연배우 성비</strong></h6>
-                        <div id="chart-actor" style="display: inline-block; position: relative; width: 120%; height: 120%; "></div>
+
+                    <div style="display: inline-block; position: relative; width: 30%; height:32vw;">
+                        <h6 style="display: inline-block; position: absolute; z-index:2; top: 19vw; left: 60%; transform: translate(-50%, 0);"><strong>주연배우 성비</strong></h6>
+                        <div style="position: absolute; z-index:2; top: 30vw; left: 60%; transform: translate(-50%, 0);">
+                            <small>전체: 출연진 데이터 list의 가장 첫 배우 662명</small>
+                        </div>
+                        <div id="chart-actor" style="display: inline-block; width: 120%; height: 120%; "></div>
                     </div>
                 </div>
                 <div>
-                    <p class="text1_2 ">감독, 작가, 배우 세 영역 모두 <strong style="color: #0060ff; ">여성</strong>이 주연급으로 영화에 참여하는 비율이 절반 미만이며,
-                        <br>감독->작가->배우 순으로 <strong style="color: #0060ff; ">여성</strong> main role 비율이 늘어납니다.
+                    <p class="text1_2 ">감독, 작가, 배우 세 영역 모두 <strong style="color: #0060ff; ">여성</strong>이 주도적으로 영화에 참여하는 비율이 절반 미만이며,
+                        <br><strong style="color: #0060ff; ">감독</strong>의 여성 비율이 가장 적습니다.
                     </p>
                 </div>
             </div>
