@@ -95,15 +95,24 @@ a:hover {
     margin: auto auto;
 }
 
+.shadowed {
+    -webkit-filter: drop-shadow(16px 65px 34px 0 rgba(131, 131, 131, 0.5));
+    filter: drop-shadow(16px 65px 34px rgba(131, 131, 131, 0.5));
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=16, OffY=65, Color= rgba(131, 131, 131, 0.5))";
+}
+
 .ticket {
-    width: 1504px;
-    height: 573px;
     transform: rotate(-9deg);
-    box-shadow: 16px 65px 34px 0 rgba(131, 131, 131, 0.5);
     display: block;
-    margin: 0px auto;
+    margin: auto;
     max-width: 90%;
     height: auto;
+}
+
+@media (max-height: 820px) {
+    .ticket {
+        height: 45vh;
+    }
 }
 
 .discription .wrap {

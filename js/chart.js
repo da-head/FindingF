@@ -38,28 +38,24 @@ async function onReady() {
         title: 'production_cost',
     });
 
-    // /*배우 필모*/
-    // drawChart_actor_filmo({
-    //     id: 'actors_filmo'
-    // })
-    // drawChart1 - 직군별 성비
+
     drawChart1({
         id: 'chart-director',
         title: '감독 성비',
-        men: 572,
-        wom: 90,
+        men: 608,
+        wom: 100,
     });
     drawChart1({
         id: 'chart-writer',
-        title: '작가 성비',
+        title: '메인작가 성비',
         men: 503,
         wom: 159,
     });
     drawChart1({
         id: 'chart-actor',
         title: '배우 성비',
-        men: 436,
-        wom: 226,
+        men: 434,
+        wom: 228,
     });
 
     director_gender({
@@ -302,16 +298,16 @@ function drawChart1({ id, title, men, wom }) {
 
 function createCustomHTMLContent(gender, quantity, percentage) {
     if (gender == '여성') {
-        return '<div style="padding: 10px 12px; text-align: left;">' +
+        return '<div style="margin: 10px 12px; text-align: left;">' +
             '<div><h6 style="color : #0060ff"><strong>' + gender + '</strong><h6></div><hr>' +
             '<div><h6>' + quantity + '명 </h6></div>' +
-            '<div><h6>`' + percentage + '%`</h6></div>' +
+            '<div><h6>' + percentage + '% &nbsp&nbsp</h6></div>' +
             '</div>';
     };
-    return '<div style="padding: 10px 12px; text-align: left;">' +
+    return '<div style="margin: 10px 12px; text-align: left;">' +
         '<div><h6 style="color : #c1c1c1"><strong>' + gender + '</strong><h6></div><hr>' +
         '<div><h6>' + quantity + '명 </h6></div>' +
-        '<div><h6>`' + percentage + '%`</h6></div>' +
+        '<div><h6>' + percentage + '% &nbsp &nbsp </h6></div>' +
         '</div>';
 
 };
