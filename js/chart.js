@@ -22,23 +22,22 @@ const bgcolor = '#fff8e5' /*아이보리*/
 const button = document.getElementById('change');
 var current = 0;
 
-
-
 // // json -> html로 데이터 어떻게 불러오는지 샘플
 // const allMovies = await (await fetch('./src/data/films.json')).json();
 
 // const movies = allMovies.filter(i => i.category === 'humour');
 // document.getElementById('movie').innerHTML = `${movies.map(movie => `<p>${movie.id} - ${movie.name}</p>`).join('')}`;
 
-async function onReady() {
 
+
+async function onReady() {
     /*감독별 제작비*/
     drawChart_cost({
         id: 'production_cost',
         title: 'production_cost',
     });
 
-
+    /*감독, 작가, 배우의 성비*/
     drawChart1({
         id: 'chart-director',
         title: '감독 성비',
@@ -58,30 +57,32 @@ async function onReady() {
         wom: 228,
     });
 
+    /*==========================================*/
+
     director_gender({
         id: 'man-director',
         title: '남성 감독의 여성 작가,배우 기용률',
         zero: 342,
-        one: 204,
-        two: 26,
+        one: 200,
+        two: 24,
     });
 
     director_gender({
         id: 'wom-director',
         title: '여성 감독의 여성 작가,배우 기용률',
-        zero: 4,
+        zero: 8,
         one: 37,
-        two: 49,
+        two: 51,
     });
 
-    //한국 영화산업, F-등급으로 다시보기
+    /*==================== 한국 영화산업, F-등급으로 다시보기 ======================*/
     changingData();
     button.onclick = function() {
         current = 1 - current;
         changingData();
     }
 
-    // #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트
+    /* #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트 */
     drawChart2({
         id: 'donut-filmmaking',
         title: '제작 단계에서 F등급 비율',
@@ -90,7 +91,6 @@ async function onReady() {
         f2: 8.89,
         f3: 7.58
     });
-
     drawChart2({
         id: 'donut-distribution',
         title: '배급 단계에서 F등급 비율',
@@ -99,7 +99,6 @@ async function onReady() {
         f2: 7,
         f3: 1.46
     });
-
     drawChart2({
         id: 'donut-screening',
         title: '상영 단계에서 F등급 비율',
@@ -116,12 +115,6 @@ async function onReady() {
 };
 
 /*----------------------------------------*/
-/*----------------------------------------*/
-/*----------------------------------------*/
-/*----------------------------------------*/
-/*----------------------------------------*/
-
-
 
 /*-------------------
 01. 감독 제작비 비교 bar

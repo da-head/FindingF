@@ -109,9 +109,9 @@ a:hover {
     height: auto;
 }
 
-@media (max-height: 820px) {
+@media (max-height: 850px) {
     .ticket {
-        height: 45vh;
+        height: 43vh;
     }
 }
 
