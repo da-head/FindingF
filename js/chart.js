@@ -86,26 +86,29 @@ async function onReady() {
     drawChart2({
         id: 'donut-filmmaking',
         title: '제작 단계에서 F등급 비율',
-        f0: 51.02,
-        f1: 32.51,
-        f2: 8.89,
-        f3: 7.58
+        f0: 342,
+        f1: 208,
+        f2: 61,
+        f3: 51,
+        unit: '개'
     });
     drawChart2({
         id: 'donut-distribution',
         title: '배급 단계에서 F등급 비율',
-        f0: 65,
-        f1: 25,
-        f2: 7,
-        f3: 1.46
+        f0: 9287407,
+        f1: 3082734,
+        f2: 1111224,
+        f3: 271332,
+        unit: '회'
     });
     drawChart2({
         id: 'donut-screening',
         title: '상영 단계에서 F등급 비율',
-        f0: 70.24,
-        f1: 23.5,
-        f2: 5.4,
-        f3: 1
+        f0: 379091063,
+        f1: 104752917,
+        f2: 31657769,
+        f3: 5182260,
+        unit: '명'
     });
 
     drawChart3({
@@ -264,8 +267,6 @@ function drawChart1({ id, title, men, wom }) {
     ]);
 
     const options = {
-        // fontName: 'CourierNewPSMT',
-        // colors: ['#979797', '#0060ff', '#0060ff'],
         bar: { groupWidth: "70%" },
         legend: { position: "none" },
         pieHole: 0.6,
@@ -305,6 +306,115 @@ function createCustomHTMLContent(gender, quantity, percentage) {
 
 };
 
+
+/*-------------------
+03. 상영 단계 별 F 등급
+---------------------*/
+function drawChart2({ id, title, f0, f1, f2, f3, unit }) {
+
+    const tot = f0 + f1 + f2 + f3;
+
+    const f0p = Math.round(100 * f0 / tot * 10) / 10;
+    const f1p = Math.round(100 * f1 / tot * 10) / 10;
+    const f2p = Math.round(100 * f2 / tot * 10) / 10;
+    const f3p = Math.round(100 * f3 / tot * 10) / 10;
+
+    const data = google.visualization.arrayToDataTable([
+        ['등급', '비율', { type: 'string', role: 'tooltip', 'p': { 'html': true } }],
+        ['F3', f3, createCustomHTMLContent3('F3', `${f3}`, `${f3p}`, `${unit}`)],
+        ['F2', f2, createCustomHTMLContent3('F2', `${f2}`, `${f2p}`, `${unit}`)],
+        ['F1', f1, createCustomHTMLContent3('F1', `${f1}`, `${f1p}`, `${unit}`)],
+        ['F0', f0, createCustomHTMLContent3('F0', `${f0}`, `${f0p}`, `${unit}`)]
+    ]);
+
+    const options = {
+
+        pieHole: 0.5,
+        pieStartAngle: 0,
+        legend: { position: "none" },
+        // fontName: 'CourierNewPSMT',
+
+        slices: {
+            0: { color: mainBlue },
+            1: { color: subBlue },
+            2: { color: subGray },
+            3: { color: dimGray },
+        },
+
+        pieSliceTextStyle: {
+            color: 'black',
+        },
+
+        backgroundColor: {
+            fill: 'none',
+        },
+        tooltip: { isHtml: true },
+
+
+    };
+    const element = document.getElementById(id);
+    const chart = new google.visualization.PieChart(element);
+
+    chart.draw(data, options);
+};
+
+function createCustomHTMLContent3(rate, quantity, percentage, unit) {
+    var colora = '#fff';
+
+    if (rate == 'F3') {
+        colora = mainBlue;
+    };
+    if (rate == 'F2') {
+        colora = dimBlue;
+    };
+    if (rate == 'F1') {
+        colora = mainGray;
+    };
+    if (rate == 'F0') {
+        colora = dimGray;
+    };
+
+    return '<div style="margin: 10px 12px; text-align: left;">' +
+        '<div><h6 style = "color: ' + colora + '"><strong>' + rate + '</strong><h6></div><hr>' +
+        '<div><h6>' + quantity + unit + '</h6></div>' +
+        '<div><h6>' + percentage + '% &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6></div>' +
+        '</div>';
+
+};
+
+/*-------------------
+04. TOP 배급사 - 87%
+---------------------*/
+function drawChart3({ id, title }) {
+
+    const data = google.visualization.arrayToDataTable([
+        ['배급사', '숫자', { type: 'string', role: 'tooltip' }],
+        ['상위 10대', 87, `상위 10대 배급사: 87%`],
+        ['기타', 13, `이 외 배급사 13%`],
+    ]);
+
+    const options = {
+        pieHole: 0.5,
+        pieStartAngle: 0,
+        legend: 'none',
+        // pieSliceText: 'none',
+        // fontName: 'CourierNewPSMT',
+        // fontSize: 12,
+        slices: {
+            0: { color: mainBlue },
+            1: { color: dimGray },
+        },
+        backgroundColor: {
+            fill: 'none'
+        }
+    };
+
+    const element = document.getElementById(id);
+    const chart = new google.visualization.PieChart(element);
+
+    chart.draw(data, options);
+
+};
 
 function director_gender({ id, title, zero, one, two }) {
 
@@ -355,8 +465,6 @@ function director_gender({ id, title, zero, one, two }) {
 };
 
 
-
-
 function createCustomHTMLContent2(count, quantity, percentage) {
     if (count == '0명') {
         return '<div style="padding: 10px 12px; text-align: left;">' +
@@ -389,8 +497,8 @@ function changingData() {
 
     var rowData1 = [
         ['등급', { label: 'count', type: 'number' }],
-        ['F-3', 49],
-        ['F-2', 63],
+        ['F-3', 51],
+        ['F-2', 61],
         ['F-1', 208],
         ['F-0', 342],
     ];
@@ -448,83 +556,4 @@ function changingData() {
         });
     options['title'] = (current ? '총 제작 영화의' : '총 관람객의') + ' F등급 분포';
     chart.draw(data[current], options);
-};
-
-
-/*-------------------
-03_2. changing data
----------------------*/
-function drawChart2({ id, title, f0, f1, f2, f3 }) {
-
-    const data = google.visualization.arrayToDataTable([
-        ['등급', '비율', { type: 'string', role: 'tooltip' }],
-        ['F-3', f3, `f-3: ${f3}%`],
-        ['F-2', f2, `f-2: ${f2}%`],
-        ['F-1', f1, `f-1: ${f1}%`],
-        ['F-0', f0, `f-0: ${f0}%`],
-    ]);
-
-
-
-    const options = {
-        // title,
-        pieHole: 0.5,
-        pieStartAngle: 0,
-        legend: 'none',
-        // pieSliceText: 'none',
-        // fontName: 'CourierNewPSMT',
-        fontSize: 12,
-        slices: {
-            0: { color: mainBlue },
-            1: { color: subBlue },
-            2: { color: subGray },
-            3: { color: dimGray },
-        },
-        pieSliceTextStyle: {
-            color: 'black',
-        },
-        backgroundColor: {
-            fill: 'none',
-        },
-
-    };
-
-    const element = document.getElementById(id);
-    const chart = new google.visualization.PieChart(element);
-
-    chart.draw(data, options);
-};
-
-/*-------------------
-04. TOP 배급사 - 87%
----------------------*/
-function drawChart3({ id, title }) {
-
-    const data = google.visualization.arrayToDataTable([
-        ['배급사', '숫자', { type: 'string', role: 'tooltip' }],
-        ['상위 10대', 87, `상위 10대 배급사: 87%`],
-        ['기타', 13, `이 외 배급사 13%`],
-    ]);
-
-    const options = {
-        pieHole: 0.5,
-        pieStartAngle: 0,
-        legend: 'none',
-        // pieSliceText: 'none',
-        // fontName: 'CourierNewPSMT',
-        // fontSize: 12,
-        slices: {
-            0: { color: mainBlue },
-            1: { color: dimGray },
-        },
-        backgroundColor: {
-            fill: 'none'
-        }
-    };
-
-    const element = document.getElementById(id);
-    const chart = new google.visualization.PieChart(element);
-
-    chart.draw(data, options);
-
 };
