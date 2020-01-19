@@ -111,8 +111,7 @@ a:hover {
 
 @media (max-height: 850px) {
     .ticket {
-        height: 43vh;
-        width: auto;
+        max-height: 43vh;
     }
 }
 
@@ -463,6 +462,21 @@ h3 .text1_2 {
     }
     #mobile {
         display: block;
+    }
+    #team {
+        display: none;
+    }
+}
+
+@media (max-height: 600px) {
+    #page-top {
+        display: none;
+    }
+    #mobile {
+        display: block;
+    }
+    #team {
+        display: none;
     }
 }
 
