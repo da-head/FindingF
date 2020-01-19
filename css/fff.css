@@ -112,6 +112,7 @@ a:hover {
 @media (max-height: 850px) {
     .ticket {
         height: 43vh;
+        width: auto;
     }
 }
 
