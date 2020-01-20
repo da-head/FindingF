@@ -28,34 +28,13 @@
     <div id="mobile">
         <img style="width: 100vw;" src="img/mobile/mobile_fff.jpeg">
     </div>
-    <div id="page-top">
-        <!--/ Nav Start/-->
-        <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
-            <div class="container">
-                <a class="logo navbar-brand js-scroll" href="#page-top">Finding F</a>
 
-                <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll active" href="#home">Top</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll" href="#intro">Intro</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll" href="#eda">EDA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll" href="#f-rated">F-Rated</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll" href="#team">Team</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <div id="page-top">
+
+        <!--/ Nav Start/-->
+        <nav include-html="html/nav.html"></nav>
         <!--/ Nav End /-->
+
         <!--/ Main Page Start/-->
         <div id="home" class="container intro rought bg-image">
             <div id="header" class="row" style="width: 100%">
@@ -70,7 +49,7 @@
 
             <div class="clear position-absolute" style="bottom: 5%;"></div>
 
-            <div class="text-block" style="position: absolute; bottom: 2%;">
+            <div class="text-block" style="position: absolute; bottom: 4%;">
                 <p class="discription">영화데이터로 분석하는<br> 영화 시장의 젠더 불균형</p>
                 <p class="discription-en">Gender Inequality in the Film Industry <br>through Data Analysis</p>
             </div>
@@ -87,7 +66,7 @@
                     <div class="row">
                         <div class="col-sm-12 col-lg-12">
                             <div class="text-white">
-                                <h2>2015년 1월부터 2019년 8월까지 개봉한 한국영화</h2>
+                                <h5>2015년 1월부터 2019년 8월까지 개봉한 한국영화</h5>
                             </div>
                             <div class="counter-box counter-box pt-4 pt-md-0">
                                 <div class="counter-num">
@@ -98,7 +77,7 @@
                         </div>
                     </div>
 
-                    <div class="row" style="padding-top: 10vh;">
+                    <div class="row" style="padding-top: 5vh;">
                         <div class="col-sm-6 col-lg-6">
                             <div class="counter-box pt-4 pt-md-0">
                                 <div class="text-white">
@@ -122,7 +101,14 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
+                    <div class="text2 text-white tbold text-center">
+                        능력 있는 신인, 성별에 따라 다른 기회
+                        <br><br> <small>비슷한 시기에 신인으로 능력을 인정받았지만, 성별에 따라서 다른 기로를 보여줍니다.</small>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -131,9 +117,11 @@
         <!-- Section 00.Intro End-->
 
         <!-- Section 01. 필모 비교 -->
+        <!-- intersection-->
+
         <section id="Korean-MovieStar-Filmograpy">
             <!-- 감독 -->
-            <div id="directors" class="page bgg">
+            <div id="directors" class="fitpage bgg">
                 <div class="title-block">
                     <h1 class="text_15 text-center tbold">비슷한 시기에 청룡영화상 신인감독상을 받은<br>감독들을 비교해 볼까요?</h1>
                 </div>
@@ -141,13 +129,14 @@
                     <img src="img/intro/감독.png" style="width:50%; margin :auto; padding: 0 auto">
                 </div>
             </div>
-            <!-- <div class="fitpage bgg">
+            <div class="fitpage bgg">
                 <p class="text18 tbold">필모그래피 비교</p>
                 <div>
                     <img src="img/intro/감독필모.png" style="display: inline-block; width: 60%; margin: auto; padding: 0 auto">
                 </div>
             </div>
-            <div class="clear"></div> -->
+            <div class="clear"></div>
+
             <!-- 제작비 비교 -->
             <div class="container page" style="background-color: white;">
                 <div class="text-block">
@@ -186,19 +175,6 @@
                 <div class="clear"></div>
             </div>
 
-
-            <!-- intersection-->
-            <div id="eda" class="section-counter paralax-mf bg-image" style="background-image: url(img/beebird.jpeg)">
-                <div class="overlay-mf black"></div>
-                <div style="height: 22vh;">
-                    <div class="text-block position-absolute">
-                        <div class="text2 tbold text-center" style="color:white;">
-                            능력 있는 신인, 성별에 따라 다른 기회
-                            <br><br> <small>비슷한 시기에 신인으로 능력을 인정받았지만, 성별에 따라서 다른 기로를 보여주는 예시는 이것 뿐일까요.</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!--  Section02 EDA-->
@@ -211,7 +187,7 @@
                         한국영화 산업의 성비
                     </p>
                 </div>
-                <div id="srate_chart" style="width: 100%; margin: -7% auto 0;">
+                <div id="srate_chart" style="width: 100%; margin: -12% auto -2% -2%;">
                     <div style="display: inline-block; position: relative; width: 30%; height:32vw;">
                         <h6 style="display: inline-block; position: absolute; z-index:2; top: 19vw; left: 60%; transform: translate(-50%, 0);"><strong>감독 성비</strong></h6>
                         <div style="position: absolute; z-index:2; top: 30vw; left: 60%; transform: translate(-50%, 0);">
@@ -232,7 +208,7 @@
                     <div style="display: inline-block; position: relative; width: 30%; height:32vw;">
                         <h6 style="display: inline-block; position: absolute; z-index:2; top: 19vw; left: 60%; transform: translate(-50%, 0);"><strong>주연배우 성비</strong></h6>
                         <div style="position: absolute; z-index:2; top: 30vw; left: 60%; transform: translate(-50%, 0);">
-                            <small>전체: 출연진 데이터 list의 가장 첫 배우 662명</small>
+                            <small>전체: 배우 662명<br>* 출연진 데이터 list의 맨 윗사람</small>
                         </div>
                         <div id="chart-actor" style="display: inline-block; width: 120%; height: 120%; "></div>
                     </div>
@@ -254,7 +230,7 @@
                             감독 성별에 따른 여성 동료 기용률
                         </p>
                     </div>
-                    <div id="srate_chart" style="width: 80%; margin: 0 auto -13vh">
+                    <div id="srate_chart" style="display: inline-block; width: 80%; margin: -8vh auto -25vh; z-index: 1;">
                         <div style="float:left; position: relative; width: 50%; height: 40vw;">
                             <h6 style="display: inline-block; position: absolute; z-index:2; top:42%; left:33%"><strong>남성 감독의 <br>여성 작가,배우 기용률</strong></h6>
                             <div id="man-director" style="display: inline-block; position: relative; width: 120%; height: 120%; "></div>
@@ -265,12 +241,13 @@
                         </div>
                         <div class="clear"></div>
                     </div>
-                    <div style="padding: 10% 0; ">
+                    <div style="padding: 10% 0; z-index: 3;">
                         <p class="text1_2 ">
                             여성이 메인 작가와 주연 배우로 선택되는 데에 큰 영향을 미치는 요인이 <strong>감독의 성별</strong>임을 확인했습니다.
                             <br> 하지만 앞서 살펴봤듯이 감독의 성비가 <strong class="man-color">남성 6</strong> : <strong class="wom-color">여성 1</strong>로 크게 기울어져 있습니다.<br> 이 같은 수치가 전반적인 영화 산업 내의 젠더 불균형으로 이어진다고 볼 수 있습니다.
                         </p>
                     </div>
+
                 </div>
             </div>
             <!-- 표 2 여성 감독 -->
@@ -448,27 +425,15 @@
 
         <!--  Section05 EDA with F-rated -->
         <section id="EDA_F ">
-            <div class="fitpage bgg">
-                <div class="title-block">
-                    <p class="text_18">한국영화 산업,<br><strong>F등급</strong>으로 다시 보기</p>
-                </div>
-                <!-- 관람객 F등급 분포-->
-                <div style="display: inline-block; width: 70%; height: 50vw; margin:-9% 0 6%;">
-                    <div id="user-distribution" style="display: inline-block; position: relative; width: 130%; height: 130%; margin:0 0 -22% 0; position: relative;"></div>
-                    <input type="button" id="change" class="button tbold" style="position:relative; z-index: 3; color: #0033B0"></button>
-                </div>
-                <p class="text1_3">관람객의 70%가 F0등급<small>(주요 포지션에 여성이 한 명도 없는)</small>영화를 보고 있습니다.<br>이러한 결과는 다른 곳에 영향을 안끼쳤을까요?</p>
-            </div>
-
             <div class="fitpage">
                 <div class="title-block" style="position: relative; z-index:3; ">
-                    <p class="text_18"><strong>여성영화,</strong><br>충분히 상영되고 있을까요?</p>
+                    <p class="text_18">한국영화 산업,<br><strong>F등급</strong>으로 다시 보기</p>
                 </div>
                 <!-- #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트 시작-->
                 <div class="container">
                     <div class="text-center" style="margin: -8vh 0 -5vh -5vw;">
                         <div id="frate_by_time-chart ">
-                            <div style="display: inline-block; width: 32%; height: 32vw; ">
+                            <div style="position: relative; display: inline-block; width: 32%; height: 32vw; ">
                                 <h6 style="display: inline-block; position: relative; z-index:2; top: 20.5vw; left: 2.5vw "><strong>제작 단계</strong></h6>
                                 <div id="donut-filmmaking" style="display: inline-block; position: relative; width: 120%; height: 120%; "></div>
                             </div>
@@ -518,21 +483,39 @@
 
 
         <!-- Section 07 OLS -->
+        <div class="page bgg">
+
+            <h1>배급사</h1>
+
+        </div>
+
+        <div class="page bgw">
+            <h1></h1>
+            <div class="text-block">
+                <p>
+                    회귀분석을 해 보니, 배급량은 관객 수 스코어를 결정하는 중요한 요인이었습니다.
+                    <br>배정 좌석 수가 1개 늘어날 때마다 관객 수가 0.3명 늘어났습니다.
+                    <br>또한, 관객 수와 매출액은 매우 밀접한 관계에 있어서 거의 똑같이 움직이는 지표였습니다. (상관계수 0.99)
+                    <br>결국 배급이 많이 될 수록 흥행성적이 좋은 것은 자명한 사실이었습니다.
+                </p>
+            </div>
+        </div>
+
         <div class="fitpage bgw">
             <div class="title-block">
-                <p class="text_18 t600">662편의 영화를 규모에 따라 세 그룹으로 나누어 분석했습니다.</p>
+                <p class="text_18 t600"><small>따라서 배급량이 비슷한 규모인 영화끼리만 비교가 가능했습니다.</small>
+                    <br>‘총 배정 좌석 수’를 기준으로 662편의 영화를
+                    <br>규모에 따라 세 그룹으로 나누어 분석했습니다.</p>
             </div>
             <p class="text1_3 ">
-                영화의 규모는 제작비에 따라 분류할 수 있습니다.
-                <br>그러나 한국 영화는 통상 제작비를 공개하지 않기 때문에 ‘총 배정 좌석수'를 영화 규모 분류의 기준으로 적용했습니다.
+                이 때, 총 배정 좌석 수에 따라 움직이는 관객 수나 매출액이 아닌, ‘좌석판매율'을 흥행성적의 지표로 설정했습니다.
             </p>
-            <p class="text-annotation text-center wom-color">* 총 배정 좌석수 = (상영관 내 좌석수 x 해당 상영관에서 상영한 횟수)의 합계</p>
             <p class="text-annotation text-center">* 총 배정 좌석수가 평균치에서 크게 벗어나서 다른 영화들과 확연히 구분되는 '극한직업'은 분석 대상에서 제외</p>
             <div style="height: 3vh;"></div>
             <div class="row" style="display: inline-block;">
                 <div class="col-md-3" style="display: inline-block; padding: 0 4vw;">
                     <img class=" img-fluid " src="img/ols_re/01beebird.png ">
-                    <div class="tbold ">
+                    <div class="tbold text-block" style="margin-top: 2vh;">
                         소규모 영화
                     </div>
                     <div class="man-color ">
@@ -540,8 +523,8 @@
                     </div>
                 </div>
                 <div class="col-md-3" style="display: inline-block; padding: 0 4vw;">
-                    <img class="img-fluid " src="img/ols_re/02girlcops.png ">
-                    <div class="tbold ">
+                    <img class="img-fluid" src="img/ols_re/02girlcops.png ">
+                    <div class="tbold text-block" style="margin-top: 2vh;">
                         중규모 영화
                     </div>
                     <div class="man-color ">
@@ -550,7 +533,7 @@
                 </div>
                 <div class="col-md-3" style="display: inline-block; padding: 0 4vw;">
                     <img class="img-fluid " src="img/ols_re/03exit.png ">
-                    <div class="tbold ">
+                    <div class="tbold text-block" style="margin-top: 2vh;">
                         대규모 영화
                     </div>
                     <div class="man-color ">
@@ -864,9 +847,46 @@
                 alert(cautiontext)
             });
 
-            $()
+
 
         });
+        includeHTML();
+
+        function includeHTML(callback) {
+            var z, i, elmnt, file, xhr;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("include-html");
+                //console.log(file);
+                if (file) {
+                    /*make an HTTP request using the attribute value as the file name:*/
+                    xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("include-html");
+                            includeHTML(callback);
+                        }
+                    };
+                    xhr.open("GET", file, true);
+                    xhr.send();
+                    /*exit the function:*/
+                    return;
+                }
+            }
+            setTimeout(function() {
+                callback();
+            }, 0);
+        }
     </script>
     <!-- <script>
             var isVisible = false;

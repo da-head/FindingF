@@ -14,8 +14,6 @@ const subGray = '#c1c1c1'
 const dimGray = '#dadada' /*연함*/
 
 const yellow = '#f5f500'
-
-
 const bgcolor = '#fff8e5' /*아이보리*/
 
 
@@ -76,11 +74,11 @@ async function onReady() {
     });
 
     /*==================== 한국 영화산업, F-등급으로 다시보기 ======================*/
-    changingData();
-    button.onclick = function() {
-        current = 1 - current;
-        changingData();
-    }
+    // changingData();
+    // button.onclick = function() {
+    //     current = 1 - current;
+    //     changingData();
+    // }
 
     /* #23p. 영화제작(영화 수)과 배급(상영횟수)에서, 그리고 흥행(관객수) F등급 비율 차이 차트 */
     drawChart2({
