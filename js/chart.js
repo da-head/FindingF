@@ -30,10 +30,10 @@ var current = 0;
 
 async function onReady() {
     /*감독별 제작비*/
-    drawChart_cost({
-        id: 'production_cost',
-        title: 'production_cost',
-    });
+    // drawChart_cost({
+    //     id: 'production_cost',
+    //     title: 'production_cost',
+    // });
 
     /*감독, 작가, 배우의 성비*/
     drawChart1({
