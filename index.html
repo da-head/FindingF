@@ -144,12 +144,10 @@
                     <p class="text1 tbold title-a">제작비 비교</p>
                 </div>
 
-
-                <iframe width="1000" height="400" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTjkX_QNpRtJLOL957F4AdbZuLnyaYXkPAF2C-mexlPsOVQBL-_cSnmlGQxf3AbAe_6MXLAO8hDAt47/pubchart?oid=1118120652&amp;format=interactive"></iframe>
+                <iframe width="648.875" height="430" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTjkX_QNpRtJLOL957F4AdbZuLnyaYXkPAF2C-mexlPsOVQBL-_cSnmlGQxf3AbAe_6MXLAO8hDAt47/pubchart?oid=1118120652&amp;format=interactive"></iframe>
                 <!-- <div id="production_cost" style="display: inline-block; margin: 0 auto; padding: 1vw auto; width: 80%; height: 70%;"> -->
 
-
-                <div>
+                <div style="position: relative;">
                     <p class="text-annotation">
                         제작비 비교 기준: 순제작비 <br> 이경미 감독의 제작비 정보가 없어 순제작비 기준으로 비교 / 김한민 감독의 극락도 살인 사건 제작비 정보가 없어 0원
                     </p>
@@ -192,7 +190,7 @@
                         한국영화 산업의 성비
                     </p>
                 </div>
-                <div id="srate_chart" style="width: 100%; margin: -12% auto -2% -2%;">
+                <div id="srate_chart" style="width: 100%; margin: -8% auto -2% -2%;">
                     <div style="display: inline-block; position: relative; width: 30%; height:32vw;">
                         <h6 style="display: inline-block; position: absolute; z-index:2; top: 19vw; left: 60%; transform: translate(-50%, 0);"><strong>감독 성비</strong></h6>
                         <div style="position: absolute; z-index:2; top: 30vw; left: 60%; transform: translate(-50%, 0);">
@@ -218,6 +216,8 @@
                         <div id="chart-actor" style="display: inline-block; width: 120%; height: 120%; "></div>
                     </div>
                 </div>
+                <div><br><br></div>
+                <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRUiDRBE1gVdxqoQdwIsa1fFtp3GlQLuMCyNdhf6CTucm4hsvjBX4BegqxfIeHqdzqy1xPj60CKZ83W/pubchart?oid=1118120652&amp;format=interactive"></iframe>
                 <div>
                     <p class="text1_2 ">감독, 작가, 배우 세 영역 모두 <strong style="color: #0060ff; ">여성</strong>이 주도적으로 영화에 참여하는 비율이 절반 미만이며,
                         <br><strong style="color: #0060ff; ">감독</strong>의 여성 비율이 가장 적습니다.
@@ -291,8 +291,10 @@
                 <div class="overlay-mf black"></div>
                 <div style="height: 22vh;">
                     <div class="text-block position-absolute">
-                        <div class="text2 t500 text-center" style="color:white;">
-                            <strong>성별</strong>이 영화인의 커리어에 영향을 미치진 않을지,<br>영화 산업 내 <strong>젠더 불균형</strong>을 체크해 볼 수 있을까요?
+                        <div class="text_18 t500 text-center" style="color:white;">
+                            <small>2015년 1월 ~ 2019년 8월 개봉 한국영화 662편 대상</small>
+                            <br>개별 영화의 성평등 지수를 평가한 후,
+                            <br>이를 토대로 영화 산업 내 젠더 불균형을 더 살펴보겠습니다.
                         </div>
                     </div>
                 </div>
@@ -496,12 +498,22 @@
 
         <div class="page bgw">
             <h1></h1>
+            <div>
+                <iframe width="489" height="302" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQngG-Lq-pUVLP6Tu943NPEekqMFQ8k-dgd1MmEvwGVgkTSlZxjvgBG0YAmMZTevkAjhYxW74ZltbbV/pubchart?oid=147537414&amp;format=interactive"></iframe>
+                <div class="text-block">
+                    <p class="text-annotation text-center" style="width: fit-content;">
+                        <strong>전국 관객 수 = 0.3098 x 총 배정 좌석 수 - 186300 (R2=0.9)</strong>
+                        <br>* 총 배정 좌석 수 = 한 영화의 각 상영마다 해당 상영관에 있는 좌석 수를 모두 합친 값
+                        <br>&nbsp (전국 524개 영화관 내 모든 상영관, 2015.01~2019.08 상영시간표 기준)
+                    </p>
+                </div>
+            </div>
             <div class="text-block">
                 <p>
-                    회귀분석을 해 보니, 배급량은 관객 수 스코어를 결정하는 중요한 요인이었습니다.
+                    회귀분석을 해 보니, <strong>배급량</strong>은 관객 수 스코어를 결정하는 중요한 요인이었습니다.
                     <br>배정 좌석 수가 1개 늘어날 때마다 관객 수가 0.3명 늘어났습니다.
                     <br>또한, 관객 수와 매출액은 매우 밀접한 관계에 있어서 거의 똑같이 움직이는 지표였습니다. (상관계수 0.99)
-                    <br>결국 배급이 많이 될 수록 흥행성적이 좋은 것은 자명한 사실이었습니다.
+                    <br>결국 <strong>배급이 많이 될 수록 흥행성적이 좋은 것</strong>은 자명한 사실이었습니다.
                 </p>
             </div>
         </div>
