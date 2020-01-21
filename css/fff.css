@@ -213,28 +213,27 @@ a:hover {
 #circle_men {
     display: inline-block;
     background-color: #dadada;
-    width: 44vw;
-    max-width: 44vw;
-    height: 44vw;
-    border-radius: 27.5vw;
+    width: 22vw;
+    max-width: 22vw;
+    height: 22vw;
+    border-radius: 11vw;
     text-align: center;
-    font-size: 2rem;
-    line-height: 44vw;
+    font-size: 1rem;
+    line-height: 22vw;
     margin: 0 auto;
     vertical-align: middle;
 }
 
 #circle_wom {
-    display: inline-block;
+    display: block;
     background-color: #0060ff;
-    width: 6vw;
-    height: 6vw;
-    border-radius: 3vw;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 1.5vw;
     text-align: center;
     font-size: 1rem;
-    line-height: 6vw;
-    margin: 0 auto;
-    vertical-align: middle;
+    line-height: 3vw;
+    margin: 3vh auto 0;
 }
 
 
