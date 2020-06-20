@@ -1,0 +1,86 @@
+<!-- Chart JavaScript Libraries-->
+<script src="https://www.gstatic.com/charts/loader.js "></script>
+<script src="js/chart.js "></script>
+
+<!-- JavaScript Libraries -->
+<script src="lib/jquery/jquery.min.js "></script>
+<script src="lib/jquery/jquery-migrate.min.js "></script>
+<script src="lib/popper/popper.min.js "></script>
+<script src="lib/bootstrap/js/bootstrap.min.js "></script>
+<script src="lib/easing/easing.min.js "></script>
+<script src="lib/counterup/jquery.waypoints.min.js "></script>
+<script src="lib/counterup/jquery.counterup.js "></script>
+<script src="lib/owlcarousel/owl.carousel.min.js "></script>
+<script src="lib/lightbox/js/lightbox.min.js "></script>
+<script src="lib/typed/typed.min.js "></script>
+
+<!-- Template Main Javascript File -->
+<script src="js/main.js "></script>
+
+<script>
+    var img1 = document.getElementById('sect03_img');
+    var div1 = "01bechdel"
+    var cautiontext = "da.head()에 대한 관심을 넘어 온라인상에서 인격 모욕, 사생활 침해, 개인정보 유출 및 도용, 악성 루머 유포등을 통한 심각한 명예 훼손 등의 각종 위법행위가 벌어질 시 민형사의 법적 대응을 진행하도록 하겠습니다. ";
+
+    var activeButton = $('#btn_bechdel')
+
+    $(document).ready(function() {
+        $(".button").click(function() {
+            $('#' + div1).hide();
+            var id = $(this).attr('value');
+            img1.src = "img/sect03_rate_model/" + id + ".png "
+            div1 = id;
+            $('#' + div1).show();
+
+            // 버튼 활성화
+            activeButton.removeClass('active');
+            $(this).addClass('active');
+            activeButton = $(this);
+
+        });
+
+        $("#caution").click(function() {
+            alert(cautiontext)
+        });
+
+
+
+    });
+    includeHTML();
+
+    function includeHTML(callback) {
+        var z, i, elmnt, file, xhr;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("include-html");
+            //console.log(file);
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            elmnt.innerHTML = this.responseText;
+                        }
+                        if (this.status == 404) {
+                            elmnt.innerHTML = "Page not found.";
+                        }
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(callback);
+                    }
+                };
+                xhr.open("GET", file, true);
+                xhr.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+        setTimeout(function() {
+            callback();
+        }, 0);
+    }
+</script>
